@@ -16,7 +16,7 @@ import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import foundation.TextContextMenu
-import foundation.TextContextMenuArea
+import foundation.textContextMenuArea
 import foundation.composable.onHover
 import foundation.representation.DialogTextContextMenuRepresentation
 import foundation.representation.model.DefaultTextContextMenuItem
@@ -48,7 +48,7 @@ fun DialogContextMenu(
     TextContextMenu(
         content = content,
         textContextMenuRepresentation = DialogTextContextMenuRepresentation(),
-        textContextMenuArea = TextContextMenuArea(
+        textContextMenuArea = textContextMenuArea(
             menuContent = { items, onDismissRequest -> DialogContextMenuBody(items, onDismissRequest) },
             builder = { defaultTextContextMenuItems(cut, copy, paste).addAll() }
         )

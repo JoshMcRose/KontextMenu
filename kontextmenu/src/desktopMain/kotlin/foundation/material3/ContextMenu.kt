@@ -22,7 +22,7 @@ import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import foundation.TextContextMenu
-import foundation.TextContextMenuArea
+import foundation.textContextMenuArea
 import foundation.composable.ContextMenuBody
 import foundation.representation.model.defaultTextContextMenuItems
 import org.jetbrains.compose.resources.DrawableResource
@@ -49,7 +49,7 @@ fun ContextMenu(
 ) {
     TextContextMenu(
         content = content,
-        textContextMenuArea = TextContextMenuArea(
+        textContextMenuArea = textContextMenuArea(
             menuContent = { items, onDismissRequest ->
                 ContextMenuBody(
                     items = items,

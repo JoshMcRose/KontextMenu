@@ -9,7 +9,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import foundation.TextContextMenu
-import foundation.TextContextMenuArea
+import foundation.textContextMenuArea
 import foundation.composable.onHover
 import foundation.material3.ContextMenuBody
 import foundation.material3.ContextMenuText
@@ -27,7 +27,7 @@ fun CustomContextMenu(
 ) {
     TextContextMenu(
         content = content,
-        textContextMenuArea = TextContextMenuArea(
+        textContextMenuArea = textContextMenuArea(
             menuContent = { items, onDismissRequest ->
                 ContextMenuBody {  // ContextMenuBody is a pre-made container designed to Material 3 specifications.
                     items.forEach { item ->

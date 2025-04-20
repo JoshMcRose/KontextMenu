@@ -1,7 +1,7 @@
 package foundation.representation.model
 
 import androidx.compose.ui.input.key.Key
-import foundation.TextContextMenuArea.Builder
+import foundation.Builder
 import kontextmenu.kontextmenu.generated.resources.Res
 import kontextmenu.kontextmenu.generated.resources.*
 import org.jetbrains.compose.resources.DrawableResource
