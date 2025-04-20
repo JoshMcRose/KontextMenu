@@ -71,7 +71,7 @@ fun ContextMenu(
  * @param enabled Whether the menu item is enabled
  */
 @Composable
-fun TextContextLeadingIcon(res: DrawableResource, enabled: Boolean) {
+fun TextContextIcon(res: DrawableResource, enabled: Boolean) {
     Icon(
         painter = painterResource(res),
         contentDescription = null,
