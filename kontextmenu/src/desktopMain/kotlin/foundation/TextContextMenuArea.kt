@@ -71,7 +71,7 @@ class TextContextMenuArea<T>(
         /**
          * Creates a TextContextMenuArea with the collected items and the provided menu content.
          */
-        fun toTextContentMenu(menuContent: @Composable (items: List<T>, onDismissRequest: (() -> Unit)?) -> Unit) =
+        fun toTextContextMenu(menuContent: @Composable (items: List<T>, onDismissRequest: (() -> Unit)?) -> Unit) =
             TextContextMenuArea(_items, menuContent)
     }
 }
