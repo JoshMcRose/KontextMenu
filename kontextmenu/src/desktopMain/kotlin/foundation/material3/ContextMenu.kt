@@ -1,6 +1,15 @@
 package foundation.material3
 
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ColumnScope
+import androidx.compose.foundation.layout.IntrinsicSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme.colorScheme
 import androidx.compose.material3.MaterialTheme.shapes
@@ -8,6 +17,8 @@ import androidx.compose.material3.MaterialTheme.typography
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import foundation.TextContextMenu
@@ -52,12 +63,30 @@ fun ContextMenu(
                     internalSpacing = 12.dp,
                     shape = shapes.extraSmall,
                     onDismissRequest = onDismissRequest,
-                    icon = { drawable, enabled -> TextContextLeadingIcon(drawable, enabled) },
+                    icon = { drawable, enabled -> TextContextIcon(drawable, enabled) },
                     text = { string, enabled, color -> ContextMenuText(string, enabled, color) }
                 )
             },
             builder = { defaultTextContextMenuItems(cut, copy, paste).addAll() }
         )
+    )
+}
+
+@Composable
+fun ContextMenuBody(
+    modifier: Modifier = Modifier,
+    content: @Composable ColumnScope.() -> Unit,
+) {
+    Column(
+        modifier = modifier
+            .shadow(8.dp)
+            .clip(shapes.extraSmall)
+            .background(colorScheme.surfaceContainer)
+            .padding(vertical = 4.dp)
+            .width(IntrinsicSize.Max)
+            .verticalScroll(rememberScrollState()),
+        verticalArrangement = Arrangement.Center,
+        content = content
     )
 }
 
