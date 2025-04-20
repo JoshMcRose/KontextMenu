@@ -31,7 +31,7 @@ kotlin {
             implementation(kotlin("test"))
             implementation(kotlin("test-junit5"))
             implementation("org.junit.jupiter:junit-jupiter-api:5.9.2")
-            implementation("org.junit.jupiter:junit-jupiter-engine:5.9.2")
+            implementation("org.junit.jupiter:junit-jupiter-engine:5.12.2")
             implementation("org.junit.platform:junit-platform-commons:1.9.2")
             implementation("org.junit.platform:junit-platform-engine:1.12.2")
         }
