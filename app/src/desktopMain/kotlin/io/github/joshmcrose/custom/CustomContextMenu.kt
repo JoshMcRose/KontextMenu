@@ -2,26 +2,11 @@ package io.github.joshmcrose.custom
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.layout.widthIn
-import androidx.compose.foundation.onClick
+import androidx.compose.foundation.layout.*
 import androidx.compose.material3.MaterialTheme.colorScheme
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import foundation.TextContextMenu
 import foundation.TextContextMenuArea
@@ -29,18 +14,8 @@ import foundation.composable.onHover
 import foundation.material3.ContextMenuBody
 import foundation.material3.ContextMenuText
 import foundation.material3.TextContextIcon
-import foundation.representation.model.DefaultTextContextMenuItem
-import kontextmenu.app.generated.resources.Res
-import kontextmenu.app.generated.resources.arrow_forward
-import kontextmenu.app.generated.resources.content_copy
-import kontextmenu.app.generated.resources.content_cut
-import kontextmenu.app.generated.resources.content_paste
-import kontextmenu.app.generated.resources.copy
-import kontextmenu.app.generated.resources.cut
-import kontextmenu.app.generated.resources.paste
-import kontextmenu.app.generated.resources.select_all
+import kontextmenu.app.generated.resources.*
 import org.jetbrains.compose.resources.stringResource
-import java.awt.SystemColor.text
 
 @Composable
 fun CustomContextMenu(
