@@ -72,6 +72,19 @@ fun ContextMenu(
     )
 }
 
+/**
+ * Composable function for rendering the body of a context menu.
+ *
+ * This function creates a vertically scrollable column with a shadow, clip,
+ * background, and padding, intended to be used as the main content area
+ * for context menus in Material 3 designs.
+ *
+ * Use this composable function to render the content of a context menu if you only want to modify the
+ * row content of the [foundation.material3.ContextMenu].
+ *
+ * @param modifier Modifier to be applied to the context menu body
+ * @param content The composable content to be displayed in the context menu
+ */
 @Composable
 fun ContextMenuBody(
     modifier: Modifier = Modifier,

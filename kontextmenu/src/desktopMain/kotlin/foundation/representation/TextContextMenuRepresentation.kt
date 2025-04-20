@@ -11,6 +11,10 @@ import androidx.compose.runtime.staticCompositionLocalOf
  * This interface allows developers to create their own implementation of how a context menu
  * should be displayed. Implementations can range from simple popups to complex dialogs or
  * custom UI components.
+ *
+ * @see [DefaultTextContextMenuRepresentation]
+ * @see [DialogTextContextMenuRepresentation]
+ *
  */
 interface TextContextMenuRepresentation {
     /**
