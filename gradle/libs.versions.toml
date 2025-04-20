@@ -3,6 +3,8 @@ compose-plugin = "1.8.0-alpha04"
 kotlin = "2.1.20"
 napier = "2.7.1"
 theme-detector = "3.9.1"
+dokka = "2.0.0"
+publish = "0.31.0"
 
 [libraries]
 aakira-napier = { module = "io.github.aakira:napier", version.ref = "napier" }
@@ -12,3 +14,5 @@ themedetector = { module = "com.github.Dansoftowner:jSystemThemeDetector", versi
 kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 jetbrains-compose = { id = "org.jetbrains.compose", version.ref = "compose-plugin" }
+dokka = { id = "org.jetbrains.dokka", version.ref = "dokka" }
+maven-publish = { id = "com.vanniktech.maven.publish", version.ref = "publish" }

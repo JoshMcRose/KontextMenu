@@ -1,7 +1,11 @@
+import com.vanniktech.maven.publish.SonatypeHost
+
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.jetbrains.compose)
+    alias(libs.plugins.dokka)
+    alias(libs.plugins.maven.publish)
 }
 
 kotlin {
@@ -30,6 +34,38 @@ kotlin {
         desktopTest.dependencies {
             implementation(kotlin("test"))
             implementation(kotlin("test-junit5"))
+        }
+    }
+}
+
+mavenPublishing {
+    publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL)
+    signAllPublications()
+    coordinates(group.toString(), "kontextmenu", version.toString())
+
+    pom {
+        name = "KontextMenu"
+        description = "A library for creating custom text field context menus in Compose for Desktop."
+        inceptionYear = "2025"
+        url = "https://github.com/JoshMcRose/KontextMenu"
+        licenses {
+            license {
+                name = "MIT License"
+                url = "https://opensource.org/license/MIT"
+                distribution = "https://opensource.org/license/MIT"
+            }
+        }
+        developers {
+            developer {
+                id = "joshmcrose"
+                name = "Josh Rose"
+                url = "https://github.com/JoshMcRose"
+            }
+        }
+        scm {
+            url = "https://github.com/JoshMcRose/KontextMenu"
+            connection = "scm:git:git://github.com/JoshMcRose/KontextMenu.git"
+            developerConnection = "scm:git:ssh://git@github.com/JoshMcRose/KontextMenu.git"
         }
     }
 }
