@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+    <string name="cut">Cut</string>
+    <string name="copy">Copy</string>
+    <string name="paste">Paste</string>
+    <string name="context_menu">Context Menu</string>
+    <string name="select_action">Select an action to perform</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+</resources>

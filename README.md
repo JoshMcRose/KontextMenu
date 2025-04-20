@@ -1,128 +1,150 @@
-# Decompose Multiplatform Template
+# KontextMenu
 
-This is a Kotlin Multiplatform project template with [Decompose](https://github.com/arkivanov/decompose) configured.
+A flexible, customizable context menu library for Compose for Desktop applications.
 
-> **Note**
-> Due to the  [current state](https://github.com/arkivanov/Decompose/issues/74) of iOS support this template uses experimental versions of Decompose.
-> If you have any issues, please report them on GitHub.
+## Overview
 
-## About this Project
+KontextMenu is a Kotlin library that provides a simple way to create and customize context menus in text fields for Compose for Desktop applications. It offers a clean API with sensible defaults while allowing for extensive customization.
 
-You can use this template to start developing your own
-[Decompose](https://github.com/arkivanov/Decompose#readme) application targeting desktop,
-Android, and iOS, either by using Compose as shared UI across all platforms, or by using
-platform-specific UI like SwiftUI and Android XML.
+## Features
 
-The instructions below provide you additional information on how to work with this template and add
-features like navigation, state preservation and more.
+- 🎨 **Multiple UI Styles**: Ready-to-use implementations for Material and Material3 design systems
+- 🧩 **Flexible Architecture**: Create your own context menu representations with a simple interface
+- 🔧 **Customizable**: Control every aspect of your context menus from appearance to behavior
+- 📝 **Text-Focused**: Specifically designed for text fields
+- 🖱️ **Desktop-Ready**: Built for Compose for Desktop with keyboard and mouse support
 
-The result will be a [Kotlin Multiplatform](https://kotlinlang.org/docs/multiplatform.html) project
-that uses the Decompose framework for common logic with the UI framework(s) of your choice and the
-features you need.
+## Installation
 
-This project was inspired by the [sample project of Decompose](https://github.com/arkivanov/Decompose/tree/master/sample)
-and the [Compose Multiplatform Template](https://github.com/JetBrains/compose-multiplatform-template).
+Add the dependency to your `build.gradle.kts` file:
 
-## Getting Started
-
-In order to work with this template you need the following tools:
-* [Android Studio](https://developer.android.com/studio)
-* (Optional) The [Kotlin Multiplatform Mobile plugin](https://plugins.jetbrains.com/plugin/14936-kotlin-multiplatform-mobile)
-
-Additionally, if you plan to write and run iOS-specific code on simulated or real devices, you need
-the following:
-
-* A machine running a recent version of macOS
-* [Xcode](https://apps.apple.com/us/app/xcode/id497799835)
-
-Tools like [KDoctor](https://github.com/Kotlin/kdoctor) can assist you during the installation
-process.
-
-## Project Structure
-
-The project consists of multiple modules:
-
-### `shared`
-
-This is a Kotlin module that contains the shared logic of all platforms. This also includes the
-Decompose implementation. 
-
-### `compose-ui`
-
-This is a Kotlin module that contains the UI written with Compose Multiplatform that is shared
-across all platforms.
-
-It depends on the `shared` module as it uses the component interfaces from Decompose.
-
-### `app-desktop`
-
-This is a Kotlin module that contains and builds the desktop (JVM) application.
-
-It makes use of the shared code from the modules `shared` and `compose-ui`.
-
-### `app-android`
-
-This is a Kotlin module that contains and builds the Android mobile application.
-
-It makes use of the shared code from the modules `shared` and `compose-ui`.
-
-### `app-ios-compose`
-
-This is an Xcode project that builds an iOS mobile application with Compose UI.
-
-It makes use of the shared code from the modules `shared` and `compose-ui`.
-
-### `app-ios-swift`
-
-This is an Xcode project that builds an iOS mobile application with SwiftUI.
-
-This module uses only the `shared` module and SwiftUI for its UI (instead of Compose).
-
-> **Note**
-> In practice you normally have either `app-ios-compose` or `app-ios-swift`.
-> 
-> Therefore, do not hesitate to merge them or delete one of the two. 
-
-## Running the project
-
-Depending on the platform you want to build for and run the project on, different gradle tasks may
-be used.
-
-### For Android
-
-When using Android Studio you can simply select `app-android` from the run configurations and run
-the app.
-
-### For Desktop
-
-```bash
-./gradlew :app-desktop:run
+```kotlin
+dependencies {
+    implementation("io.github.joshmcrose:kontextmenu:1.0.0")
+}
 ```
 
-### For iOS (Compose)
+## Basic Usage
 
-If you have installed the Kotlin Multiplatform Mobile plugin you can simply select `app-ios-compose`
-from the run configurations and run the app.
+Here's a simple example of how to use KontextMenu with Material3 styling:
 
-Alternatively you can open `app-ios-compose/app-ios-compose.xcodeproj` in XCode and launch the project
-from there.
+```kotlin
+@Composable
+fun MyTextEditor() {
+    var text by remember { mutableStateOf("Select this text to see the context menu") }
 
-### For iOS (Swift)
+    ContextMenu(
+        cut = { /* Handle cut operation */ },
+        copy = { /* Handle copy operation */ },
+        paste = { /* Handle paste operation */ }
+    ) {
+        TextField(
+            value = text,
+            onValueChange = { text = it }
+        )
+    }
+}
+```
 
-If you have installed the Kotlin Multiplatform Mobile plugin you can simply select `app-ios-swift`
-from the run configurations and run the app.
+## Components
 
-Alternatively you can open `app-ios-swift/app-ios-swift.xcodeproj` in XCode and launch the project
-from there.
+### TextContextMenuArea
 
-## Further Reading
+The core component that creates the context menu area. It handles the detection of right-clicks and displays the context menu.
 
-We encourage you to explore Decompose's features further and try adding them into your project:
+```kotlin
+TextContextMenuArea(
+    menuContent = { items, onDismissRequest ->
+        // Your custom menu UI here
+    },
+    builder = { 
+        // Add your menu items here
+        customItem.add()
+        anotherItem.add()
+        listOfItems.addAll()
+    }
+)
+```
 
-* [Add basic navigation with child stack(s) to your project](https://arkivanov.github.io/Decompose/navigation/stack/overview/)
-* [Add child slots for loading one child at a time, or none](https://arkivanov.github.io/Decompose/navigation/slot/overview/)
-* [Add back button handlers for intercepting back button presses](https://arkivanov.github.io/Decompose/component/back-button/)
+### TextContextMenuRepresentation
 
-You can also have a look at various integrations, including:
+An interface that defines how the context menu is displayed. KontextMenu comes with two implementations:
 
-* [Integration](https://github.com/IlyaGulya/TodoAppDecomposeMviKotlin) of [MVIKotlin](https://github.com/arkivanov/MVIKotlin) for sharing code using MVI pattern.
+1. **DefaultTextContextMenuRepresentation**: Creates a popup-based context menu
+2. **DialogTextContextMenuRepresentation**: Creates a dialog-based context menu
+
+## Pre-built Context Menus
+
+KontextMenu provides ready-to-use context menu implementations:
+
+### Material Design
+
+```kotlin
+ContextMenu(
+    cut = { /* Handle cut */ },
+    copy = { /* Handle copy */ },
+    paste = { /* Handle paste */ }
+) {
+    // Your text field here
+}
+```
+
+### Material3 Design
+
+```kotlin
+ContextMenu(
+    cut = { /* Handle cut */ },
+    copy = { /* Handle copy */ },
+    paste = { /* Handle paste */ }
+) {
+    // Your text field here
+}
+```
+
+### Dialog-based Context Menu (Material3)
+
+```kotlin
+DialogContextMenu(
+    cut = { /* Handle cut */ },
+    copy = { /* Handle copy */ },
+    paste = { /* Handle paste */ }
+) {
+    // Your text field here
+}
+```
+
+## Advanced Customization
+
+Create your own context menu representation by implementing the `TextContextMenuRepresentation` interface:
+
+```kotlin
+class MyCustomContextMenuRepresentation : TextContextMenuRepresentation {
+    @Composable
+    override fun <T> Representation(
+        state: ContextMenuState,
+        menuContent: @Composable (items: List<T>, onDismissRequest: (() -> Unit)?) -> Unit,
+        items: List<T>
+    ) {
+        // Your custom implementation here
+    }
+}
+```
+
+Then use it with the `TextContextMenu` composable:
+
+```kotlin
+TextContextMenu(
+    content = { /* Your content */ },
+    textContextMenuRepresentation = MyCustomContextMenuRepresentation(),
+    textContextMenuArea = TextContextMenuArea(
+        menuContent = { items, onDismissRequest -> 
+            // Your custom menu UI 
+        },
+        builder = { /* Add your items */ }
+    )
+)
+```
+
+## License
+
+This library is released under the MIT License. See the LICENSE file for details.

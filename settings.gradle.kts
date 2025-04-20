@@ -1,22 +1,38 @@
 @file:Suppress("UnstableApiUsage")
 
+rootProject.name = "KontextMenu"
+
 pluginManagement {
     repositories {
-        google()
-        gradlePluginPortal()
+        google {
+            mavenContent {
+                includeGroupAndSubgroups("androidx")
+                includeGroupAndSubgroups("com.android")
+                includeGroupAndSubgroups("com.google")
+            }
+        }
         mavenCentral()
+        gradlePluginPortal()
     }
+}
+
+plugins {
+    id("org.gradle.toolchains.foojay-resolver-convention") version "0.10.0"
 }
 
 dependencyResolutionManagement {
     repositories {
-        google()
+        google {
+            mavenContent {
+                includeGroupAndSubgroups("androidx")
+                includeGroupAndSubgroups("com.android")
+                includeGroupAndSubgroups("com.google")
+            }
+        }
         mavenCentral()
+        maven("https://jitpack.io")
     }
 }
 
-rootProject.name = "decompose-template"
-include(":shared")
-include(":compose-ui")
-include(":app-android")
-include(":app-desktop")
+include(":kontextmenu")
+include(":app")
