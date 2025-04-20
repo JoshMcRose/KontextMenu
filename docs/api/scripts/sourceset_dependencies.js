@@ -1,0 +1,1 @@
+sourceset_dependencies='{":kontextmenu:dokkaHtml/commonMain":[],":kontextmenu:dokkaHtml/desktopMain":[":kontextmenu:dokkaHtml/commonMain"]}'
