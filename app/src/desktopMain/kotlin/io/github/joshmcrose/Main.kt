@@ -38,7 +38,7 @@ import java.io.InputStream
 
 fun main() {
     application {
-        val windowParams = DpSize(600.dp, 400.dp)
+        val windowParams = DpSize(800.dp, 600.dp)
         val windowState = rememberWindowState(size = windowParams, placement = Floating)
         val isDarkTheme = rememberDarkTheme()
 
