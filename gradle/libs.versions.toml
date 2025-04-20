@@ -12,8 +12,5 @@ kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "ko
 jetbrains-compose = { id = "org.jetbrains.compose", version.ref = "compose-plugin" }
 
 [libraries]
-kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
-kotlin-test-junit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
-junit = { group = "junit", name = "junit", version.ref = "junit" }
 aakira-napier = { module = "io.github.aakira:napier", version.ref = "napier" }
 themedetector = { module = "com.github.Dansoftowner:jSystemThemeDetector", version.ref = "theme-detector" }
