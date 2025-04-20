@@ -45,7 +45,7 @@ fun main() {
         Window(
             onCloseRequest = ::exitApplication,
             state = windowState,
-            title = "Kontext Menu Demo"
+            title = "KontextMenu Demo"
         ) {
             window.minimumSize = Dimension(600.dp.value.toInt(), 400.dp.value.toInt())
 
