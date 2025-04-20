@@ -1,4 +1,5 @@
 import com.vanniktech.maven.publish.SonatypeHost
+import org.jetbrains.dokka.gradle.DokkaTask
 
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
@@ -36,6 +37,10 @@ kotlin {
             implementation(kotlin("test-junit5"))
         }
     }
+}
+
+tasks.withType<DokkaTask>().configureEach {
+    moduleName = "KontextMenu"
 }
 
 mavenPublishing {
