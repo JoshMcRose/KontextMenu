@@ -1,3 +1,5 @@
+<img src="/assets/logo-icon.svg" width="500" height="400" align="right" alt="KontextMenu Logo">
+
 # KontextMenu
 
 A flexible, customizable context menu library for Compose for Desktop applications.
@@ -33,7 +35,7 @@ Here's a simple example of how to use KontextMenu with Material3 styling:
 fun MyTextEditor() {
     var text by remember { mutableStateOf("Select this text to see the context menu") }
 
-    ContextMenu(
+    KontextMenu(
         cut = { /* Handle cut operation */ },
         copy = { /* Handle copy operation */ },
         paste = { /* Handle paste operation */ }
@@ -48,12 +50,12 @@ fun MyTextEditor() {
 
 ## Components
 
-### TextContextMenuArea
+### KontextMenuArea
 
 The core component that creates the context menu area. It handles the detection of right-clicks and displays the context menu.
 
 ```kotlin
-TextContextMenuArea(
+KontextMenuArea(
     menuContent = { items, onDismissRequest ->
         // Your custom menu UI here
     },
@@ -66,12 +68,12 @@ TextContextMenuArea(
 )
 ```
 
-### TextContextMenuRepresentation
+### KontextMenuRepresentation
 
 An interface that defines how the context menu is displayed. KontextMenu comes with two implementations:
 
-1. **DefaultTextContextMenuRepresentation**: Creates a popup-based context menu
-2. **DialogTextContextMenuRepresentation**: Creates a dialog-based context menu
+1. **ContainerizedKontextMenuRepresentation**: A menu representation with a built-in `Popup` container.
+2. **UncontainerizedKontextMenuRepresentation**: A menu representation with no containing composable, leaving the menu structure fully up to the end user.
 
 ## Pre-built Context Menus
 
@@ -80,7 +82,7 @@ KontextMenu provides ready-to-use context menu implementations:
 ### Material Design
 
 ```kotlin
-ContextMenu(
+KontextMenu(
     cut = { /* Handle cut */ },
     copy = { /* Handle copy */ },
     paste = { /* Handle paste */ }
@@ -92,7 +94,7 @@ ContextMenu(
 ### Material3 Design
 
 ```kotlin
-ContextMenu(
+KontextMenu(
     cut = { /* Handle cut */ },
     copy = { /* Handle copy */ },
     paste = { /* Handle paste */ }
@@ -104,7 +106,7 @@ ContextMenu(
 ### Dialog-based Context Menu (Material3)
 
 ```kotlin
-DialogContextMenu(
+DialogKontextMenu(
     cut = { /* Handle cut */ },
     copy = { /* Handle copy */ },
     paste = { /* Handle paste */ }
@@ -115,10 +117,10 @@ DialogContextMenu(
 
 ## Advanced Customization
 
-Create your own context menu representation by implementing the `TextContextMenuRepresentation` interface:
+Create your own context menu representation by implementing the `KontextMenuRepresentation` interface:
 
 ```kotlin
-class MyCustomContextMenuRepresentation : TextContextMenuRepresentation {
+class MyCustomKontextMenuRepresentation : KontextMenuRepresentation {
     @Composable
     override fun <T> Representation(
         state: ContextMenuState,
@@ -130,13 +132,13 @@ class MyCustomContextMenuRepresentation : TextContextMenuRepresentation {
 }
 ```
 
-Then use it with the `TextContextMenu` composable:
+Then use it with the `KontextMenu` composable:
 
 ```kotlin
-TextContextMenu(
+KontextMenu(
     content = { /* Your content */ },
-    textContextMenuRepresentation = MyCustomContextMenuRepresentation(),
-    textContextMenuArea = TextContextMenuArea(
+    textContextMenuRepresentation = MyCustomKontextMenuRepresentation(),
+    textContextMenuArea = kontextMenuArea(
         menuContent = { items, onDismissRequest -> 
             // Your custom menu UI 
         },
