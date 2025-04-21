@@ -1,10 +1,9 @@
 package io.github.joshmcrose.representation.model
 
+import androidx.compose.ui.input.key.Key
 import io.github.joshmcrose.Builder
 import io.github.joshmcrose.KontextMenuKeyShortcut
-import androidx.compose.ui.input.key.Key
-import kontextmenu.kontextmenu.generated.resources.Res
-import kontextmenu.kontextmenu.generated.resources.*
+import io.github.joshmcrose.kontextmenu.generated.resources.*
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.skiko.OS

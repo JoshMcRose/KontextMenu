@@ -80,7 +80,7 @@ fun KontextMenu(
  * for context menus in Material 3 designs.
  *
  * Use this composable function to render the content of a context menu if you only want to modify the
- * row content of the [foundation.material3.KontextMenu].
+ * row content of the [io.github.joshmcrose.material3.KontextMenu].
  *
  * @param modifier Modifier to be applied to the context menu body
  * @param content The composable content to be displayed in the context menu

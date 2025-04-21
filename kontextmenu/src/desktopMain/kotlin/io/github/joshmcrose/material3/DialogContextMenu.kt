@@ -1,6 +1,5 @@
 package io.github.joshmcrose.material3
 
-import io.github.joshmcrose.KontextMenu
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -16,13 +15,13 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import io.github.joshmcrose.KontextMenu
 import io.github.joshmcrose.kontextMenuArea
+import io.github.joshmcrose.kontextmenu.generated.resources.*
 import io.github.joshmcrose.representation.UncontainerizedKontextMenuRepresentation
 import io.github.joshmcrose.representation.model.KontextMenuItem
 import io.github.joshmcrose.representation.model.kontextMenuItems
 import io.github.joshmcrose.ui.onHover
-import kontextmenu.kontextmenu.generated.resources.Res
-import kontextmenu.kontextmenu.generated.resources.*
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 
