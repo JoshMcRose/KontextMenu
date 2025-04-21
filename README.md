@@ -1,6 +1,4 @@
-<img src="/assets/logo-icon.svg" width="500" height="400" align="right" alt="KontextMenu Logo">
-
-# KontextMenu
+# KontextMenu <img src="/assets/logo-icon.svg" width="300" height="150" align="right" alt="KontextMenu Logo">
 
 A flexible, customizable context menu library for Compose for Desktop applications.
 
