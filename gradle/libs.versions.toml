@@ -9,6 +9,7 @@ publish = "0.31.0"
 [libraries]
 aakira-napier = { module = "io.github.aakira:napier", version.ref = "napier" }
 themedetector = { module = "com.github.Dansoftowner:jSystemThemeDetector", version.ref = "theme-detector" }
+dokka-base = { module = "org.jetbrains.dokka:dokka-base", version.ref = "dokka" }
 
 [plugins]
 kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }

@@ -1,5 +1,8 @@
 import com.vanniktech.maven.publish.SonatypeHost
+import org.jetbrains.dokka.base.DokkaBase
+import org.jetbrains.dokka.base.DokkaBaseConfiguration
 import org.jetbrains.dokka.gradle.DokkaTask
+import org.jetbrains.kotlin.com.intellij.openapi.util.text.HtmlChunk.icon
 
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
@@ -7,6 +10,12 @@ plugins {
     alias(libs.plugins.jetbrains.compose)
     alias(libs.plugins.dokka)
     alias(libs.plugins.maven.publish)
+}
+
+buildscript {
+    dependencies {
+        classpath(libs.dokka.base)
+    }
 }
 
 kotlin {
@@ -41,7 +50,10 @@ kotlin {
 
 tasks.withType<DokkaTask>().configureEach {
     moduleName = "KontextMenu"
-    outputDirectory.set(rootDir.resolve("docs"))
+    outputDirectory = rootDir.resolve("docs")
+    pluginConfiguration<DokkaBase, DokkaBaseConfiguration> {
+        customAssets = listOf(rootDir.resolve("assets/logo-icon.svg"))
+    }
 }
 
 mavenPublishing {
