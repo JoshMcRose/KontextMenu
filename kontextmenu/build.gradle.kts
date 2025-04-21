@@ -17,6 +17,9 @@ buildscript {
     }
 }
 
+group = "io.github.joshmcrose"
+version = "0.1.2"
+
 kotlin {
     jvm("desktop") {
         testRuns["test"].executionTask.configure {
@@ -49,14 +52,12 @@ kotlin {
 
 tasks.withType<DokkaTask>().configureEach {
     moduleName = "KontextMenu"
+    moduleVersion = version.toString()
     outputDirectory = rootDir.resolve("docs")
     pluginConfiguration<DokkaBase, DokkaBaseConfiguration> {
         customAssets = listOf(rootDir.resolve("assets/logo-icon.svg"))
     }
 }
-
-group = "io.github.joshmcrose"
-version = "0.1.2"
 
 mavenPublishing {
     publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL)
