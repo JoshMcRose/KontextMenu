@@ -8,12 +8,12 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import foundation.KontextMenu
-import foundation.kontextMenuArea
-import foundation.composable.onHover
-import foundation.material3.KontextMenuBody
-import foundation.material3.KontextMenuText
-import foundation.material3.KontextIcon
+import io.github.joshmcrose.KontextMenu
+import io.github.joshmcrose.kontextMenuArea
+import io.github.joshmcrose.ui.onHover
+import io.github.joshmcrose.material3.KontextMenuBody
+import io.github.joshmcrose.material3.KontextMenuText
+import io.github.joshmcrose.material3.KontextIcon
 import kontextmenu.app.generated.resources.*
 import org.jetbrains.compose.resources.stringResource
 

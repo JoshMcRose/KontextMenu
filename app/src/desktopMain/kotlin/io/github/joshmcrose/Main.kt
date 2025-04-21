@@ -27,6 +27,8 @@ import androidx.compose.ui.window.WindowPlacement.Floating
 import androidx.compose.ui.window.application
 import androidx.compose.ui.window.rememberWindowState
 import io.github.joshmcrose.custom.CustomContextMenu
+import io.github.joshmcrose.material3.DialogKontextMenu
+import io.github.joshmcrose.material3.KontextMenu
 import io.github.joshmcrose.theme.AppTheme
 import io.github.joshmcrose.theme.rememberDarkTheme
 import java.awt.Dimension
@@ -128,7 +130,7 @@ fun Menu(
 ) {
     when (implementations) {
         Implementations.M3 -> {
-            foundation.material3.KontextMenu(
+            KontextMenu(
                 cut = cut,
                 copy = copy,
                 paste = paste,
@@ -136,7 +138,7 @@ fun Menu(
             )
         }
         Implementations.M2 -> {
-            foundation.material.KontextMenu(
+            io.github.joshmcrose.material.KontextMenu(
                 cut = cut,
                 copy = copy,
                 paste = paste,
@@ -144,7 +146,7 @@ fun Menu(
             )
         }
         Implementations.M3Dialog -> {
-            foundation.material3.DialogKontextMenu(
+            DialogKontextMenu(
                 cut = cut,
                 copy = copy,
                 paste = paste,
