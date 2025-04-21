@@ -41,7 +41,7 @@ kotlin {
 
 tasks.withType<DokkaTask>().configureEach {
     moduleName = "KontextMenu"
-    outputDirectory.set(rootDir.resolve("docs/api"))
+    outputDirectory.set(rootDir.resolve("docs"))
 }
 
 mavenPublishing {
