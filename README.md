@@ -1,6 +1,6 @@
 <img src="/assets/banner-image.svg" alt="KontextMenu">
 
-[![Maven Central](https://img.shields.io/maven-central/v/io.github.joshmcrose/kontextmenu?label=Maven%20Central&style=plastic&labelColor=3C4D00&color=B7D167)](https://search.maven.org/artifact/io.github.joshmcrose/kontextmenu)
+<a href="https://search.maven.org/artifact/io.github.joshmcrose/kontextmenu" target="_blank">![Maven Central](https://img.shields.io/maven-central/v/io.github.joshmcrose/kontextmenu?label=Maven%20Central&style=plastic&labelColor=3C4D00&color=B7D167)</a>
 ![Static Badge](https://img.shields.io/badge/JVM-desktop?style=plastic&label=Desktop&labelColor=3C4D00&color=B7D167)
 
 A flexible, customizable context menu library for Compose for Desktop applications.
@@ -160,7 +160,7 @@ KontextMenu(
 
 ## Documentation
 
-[KontextMenu Docs](https://joshmcrose.github.io/KontextMenu/) powered by Dokka
+<a href="https://joshmcrose.github.io/KontextMenu/" target="_blank">KontextMenu Docs powered by Dokka</a>
 
 ## License
 
