@@ -56,12 +56,12 @@ tasks.withType<DokkaTask>().configureEach {
 }
 
 group = "io.github.joshmcrose"
-version = "0.1.0"
+version = "0.1.1"
 
 mavenPublishing {
     publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL)
     signAllPublications()
-    coordinates("io.github.joshmcrose", "kontextmenu", "0.1.1")
+    coordinates(group.toString(), "kontextmenu", version.toString())
 
     pom {
         name = "KontextMenu"
