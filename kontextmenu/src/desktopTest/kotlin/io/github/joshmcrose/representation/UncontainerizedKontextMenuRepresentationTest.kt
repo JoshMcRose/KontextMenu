@@ -3,7 +3,6 @@ package io.github.joshmcrose.representation
 import androidx.compose.foundation.ContextMenuState
 import androidx.compose.ui.geometry.Rect
 import org.junit.jupiter.api.Test
-import io.github.joshmcrose.representation.UncontainerizedKontextMenuRepresentation
 import kotlin.test.assertEquals
 
 class UncontainerizedKontextMenuRepresentationTest {
@@ -15,7 +14,7 @@ class UncontainerizedKontextMenuRepresentationTest {
         
         // Assert
         // Simply verify that the object can be created without errors
-        assertEquals(representation.UncontainerizedKontextMenuRepresentation::class, representation::class)
+        assertEquals(UncontainerizedKontextMenuRepresentation::class, representation::class)
     }
     
     @Test
