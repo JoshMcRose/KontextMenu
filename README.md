@@ -68,6 +68,8 @@ KontextMenuArea(
 )
 ```
 
+<img src="/assets/EndUserImpl.png" alt="User Implementation">
+
 ### KontextMenuRepresentation
 
 An interface that defines how the context menu is displayed. KontextMenu comes with two implementations:
@@ -91,6 +93,8 @@ KontextMenu(
 }
 ```
 
+<img src="/assets/MaterialImpl.png" alt="Material Menu">
+
 ### Material3 Design
 
 ```kotlin
@@ -103,6 +107,8 @@ KontextMenu(
 }
 ```
 
+<img src="/assets/Material3Impl.png" alt="Material3 Menu">
+
 ### Dialog-based Context Menu (Material3)
 
 ```kotlin
@@ -114,6 +120,8 @@ DialogKontextMenu(
     // Your text field here
 }
 ```
+
+<img src="/assets/DialogImpl.gif" alt="Dialog Menu">
 
 ## Advanced Customization
 
@@ -146,6 +154,8 @@ KontextMenu(
     )
 )
 ```
+
+<img src="/assets/CustomImpl.png" alt="Custom Menu">
 
 ## Documentation
 
