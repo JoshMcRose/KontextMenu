@@ -61,7 +61,7 @@ version = "0.1.0"
 mavenPublishing {
     publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL)
     signAllPublications()
-    coordinates("io.github.joshmcrose", "kontextmenu", "0.1.0")
+    coordinates("io.github.joshmcrose", "kontextmenu", "0.1.1")
 
     pom {
         name = "KontextMenu"
