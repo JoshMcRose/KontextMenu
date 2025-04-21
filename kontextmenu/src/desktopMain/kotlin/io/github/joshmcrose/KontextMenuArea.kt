@@ -60,12 +60,12 @@ fun <T> KontextMenu(
 ) { content() }
 
 /**
- * Creates a [IKontextMenuArea] with a builder pattern.
+ * Creates an [IKontextMenuArea] with a builder pattern.
  *
- * This function provides a convenient way to create a [IKontextMenuArea] using a builder pattern.
+ * This function provides a convenient way to create an [IKontextMenuArea] using a builder pattern.
  *
  * @param menuContent A composable function that renders the content of the menu
- * @param builder A builder function to configure the [IKontextMenuArea]]
+ * @param builder A builder function to configure the [IKontextMenuArea]
  * @return A configured [IKontextMenuArea]
  */
 inline fun <T> kontextMenuArea(
