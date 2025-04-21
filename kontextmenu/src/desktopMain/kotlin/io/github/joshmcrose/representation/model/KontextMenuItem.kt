@@ -12,7 +12,7 @@ import org.jetbrains.skiko.hostOs
 /**
  * Data class representing an item in a text context menu.
  *
- * This class contains default properties to display and handle a menu item
+ * This class contains a standard list of properties to display and handle a menu item
  * in a text context menu.
  *
  * @property leadingIcon Optional icon to display before the label
@@ -30,7 +30,7 @@ data class KontextMenuItem(
 )
 
 /**
- * Creates a list of default text context menu items for common operations.
+ * Creates a list of [KontextMenuItem]s for common operations.
  *
  * This function creates a list of menu items for cut, copy, and paste operations,
  * with appropriate icons, labels, and keyboard shortcuts. The menu items are enabled
@@ -39,7 +39,7 @@ data class KontextMenuItem(
  * @param cut Optional callback for the cut operation
  * @param copy Optional callback for the copy operation
  * @param paste Optional callback for the paste operation
- * @return A list of DefaultTextContextMenuItem objects
+ * @return A list of [KontextMenuItem] objects
  */
 fun kontextMenuItems(
     cut: (() -> Unit)?,

@@ -22,7 +22,7 @@ Add the dependency to your `build.gradle.kts` file:
 
 ```kotlin
 dependencies {
-    implementation("io.github.joshmcrose:kontextmenu:0.1.1")
+    implementation("io.github.joshmcrose:kontextmenu:0.1.2")
 }
 ```
 

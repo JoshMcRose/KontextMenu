@@ -16,12 +16,12 @@ import io.github.joshmcrose.representation.KontextMenuRepresentation
 import io.github.joshmcrose.representation.LocalKontextMenuRepresentation
 
 /**
- * Creates a text context menu with the provided TextContextMenuArea.
+ * Creates a text context menu with the provided [IKontextMenuArea] and [KontextMenuRepresentation].
  *
- * This function sets up a text context menu with the provided TextContextMenuArea
- * and provides it to the content through CompositionLocalProvider.
+ * This function sets up a text context menu with the provided [IKontextMenuArea] and [KontextMenuRepresentation]
+ * and provides them to the content through CompositionLocalProvider.
  *
- * @param kontextMenuArea The TextContextMenuArea to use
+ * @param kontextMenuArea The [IKontextMenuArea] to use
  * @param kontextMenuRepresentation The representation to use for the context menu
  * @param content The content to display in the context menu area
  */
@@ -60,13 +60,13 @@ fun <T> KontextMenu(
 ) { content() }
 
 /**
- * Creates a TextContextMenuArea with a builder pattern.
+ * Creates a [IKontextMenuArea] with a builder pattern.
  *
- * This function provides a convenient way to create a TextContextMenuArea using a builder pattern.
+ * This function provides a convenient way to create a [IKontextMenuArea] using a builder pattern.
  *
  * @param menuContent A composable function that renders the content of the menu
- * @param builder A builder function to configure the TextContextMenuArea
- * @return A configured TextContextMenuArea
+ * @param builder A builder function to configure the [IKontextMenuArea]]
+ * @return A configured [IKontextMenuArea]
  */
 inline fun <T> kontextMenuArea(
     noinline menuContent: @Composable (items: List<T>, onDismissRequest: (() -> Unit)?) -> Unit,
@@ -74,7 +74,7 @@ inline fun <T> kontextMenuArea(
 ) = Builder<T>().apply(builder).toKontextMenu(menuContent)
 
 /**
- * Builder class for creating an ITextContextMenuArea with a fluent API.
+ * Builder class for creating an [IKontextMenuArea] with a fluent API.
  *
  * This class provides extension functions to easily add items to the menu.
  *
@@ -95,7 +95,7 @@ class Builder<T>() {
     fun List<T>.addAll() = _items.addAll(this)
 
     /**
-     * Creates a TextContextMenuArea with the collected items and the provided menu content.
+     * Creates an [IKontextMenuArea] with the collected items and the provided menu content.
      */
     fun toKontextMenu(
         menuContent: @Composable (items: List<T>, onDismissRequest: (() -> Unit)?) -> Unit

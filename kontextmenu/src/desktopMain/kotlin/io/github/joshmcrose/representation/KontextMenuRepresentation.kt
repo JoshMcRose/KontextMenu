@@ -6,7 +6,7 @@ import androidx.compose.runtime.ProvidableCompositionLocal
 import androidx.compose.runtime.staticCompositionLocalOf
 
 /**
- * Interface for creating custom text context menu representations.
+ * Interface for creating custom context menu representations.
  * 
  * This interface allows developers to create their own implementation of how a context menu
  * should be displayed. Implementations can range from simple popups to complex dialogs or
@@ -33,7 +33,7 @@ interface KontextMenuRepresentation {
 }
 
 /**
- * Provides a CompositionLocal for accessing the current TextContextMenuRepresentation.
+ * Provides a CompositionLocal for accessing the current [KontextMenuRepresentation].
  *
  * This allows components to access the current representation without having to pass it
  * explicitly through the composition tree.
