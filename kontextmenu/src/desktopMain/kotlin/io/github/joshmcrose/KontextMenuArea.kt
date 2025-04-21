@@ -74,7 +74,7 @@ inline fun <T> kontextMenuArea(
 ) = Builder<T>().apply(builder).toKontextMenu(menuContent)
 
 /**
- * .io.github.joshmcrose.Builder class for creating an ITextContextMenuArea with a fluent API.
+ * Builder class for creating an ITextContextMenuArea with a fluent API.
  *
  * This class provides extension functions to easily add items to the menu.
  *
