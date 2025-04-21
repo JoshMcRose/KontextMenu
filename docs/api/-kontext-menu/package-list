@@ -1,72 +1,70 @@
 $dokka.format:html-v1
 $dokka.linkExtension:html
-$dokka.location:foundation.composable////PointingToDeclaration/-kontext-menu/foundation.composable/index.html
-$dokka.location:foundation.composable//KontextMenuPopup/#androidx.compose.foundation.ContextMenuState.Status.Open#kotlin.Function0[kotlin.Unit]?#kotlin.Function1[kotlin.Function0[kotlin.Unit]?,kotlin.Unit]/PointingToDeclaration/-kontext-menu/foundation.composable/-kontext-menu-popup.html
-$dokka.location:foundation.composable//onHover/androidx.compose.ui.Modifier#kotlin.Function1[kotlin.Boolean,kotlin.Unit]/PointingToDeclaration/-kontext-menu/foundation.composable/on-hover.html
-$dokka.location:foundation.material////PointingToDeclaration/-kontext-menu/foundation.material/index.html
-$dokka.location:foundation.material//KontextIcon/#org.jetbrains.compose.resources.DrawableResource#kotlin.Boolean/PointingToDeclaration/-kontext-menu/foundation.material/-kontext-icon.html
-$dokka.location:foundation.material//KontextMenu/#kotlin.Function0[kotlin.Unit]?#kotlin.Function0[kotlin.Unit]?#kotlin.Function0[kotlin.Unit]?#kotlin.Function0[kotlin.Unit]/PointingToDeclaration/-kontext-menu/foundation.material/-kontext-menu.html
-$dokka.location:foundation.material//KontextMenuText/#kotlin.String#kotlin.Boolean/PointingToDeclaration/-kontext-menu/foundation.material/-kontext-menu-text.html
-$dokka.location:foundation.material3////PointingToDeclaration/-kontext-menu/foundation.material3/index.html
-$dokka.location:foundation.material3//DialogKontextMenu/#kotlin.Function0[kotlin.Unit]?#kotlin.Function0[kotlin.Unit]?#kotlin.Function0[kotlin.Unit]?#kotlin.Function0[kotlin.Unit]/PointingToDeclaration/-kontext-menu/foundation.material3/-dialog-kontext-menu.html
-$dokka.location:foundation.material3//KontextIcon/#org.jetbrains.compose.resources.DrawableResource#kotlin.Boolean/PointingToDeclaration/-kontext-menu/foundation.material3/-kontext-icon.html
-$dokka.location:foundation.material3//KontextMenu/#kotlin.Function0[kotlin.Unit]?#kotlin.Function0[kotlin.Unit]?#kotlin.Function0[kotlin.Unit]?#kotlin.Function0[kotlin.Unit]/PointingToDeclaration/-kontext-menu/foundation.material3/-kontext-menu.html
-$dokka.location:foundation.material3//KontextMenuBody/#androidx.compose.ui.Modifier#kotlin.Function1[androidx.compose.foundation.layout.ColumnScope,kotlin.Unit]/PointingToDeclaration/-kontext-menu/foundation.material3/-kontext-menu-body.html
-$dokka.location:foundation.material3//KontextMenuText/#kotlin.String#kotlin.Boolean#androidx.compose.ui.graphics.Color/PointingToDeclaration/-kontext-menu/foundation.material3/-kontext-menu-text.html
-$dokka.location:foundation.representation.model////PointingToDeclaration/-kontext-menu/foundation.representation.model/index.html
-$dokka.location:foundation.representation.model//kontextMenuItems/#kotlin.Function0[kotlin.Unit]?#kotlin.Function0[kotlin.Unit]?#kotlin.Function0[kotlin.Unit]?/PointingToDeclaration/-kontext-menu/foundation.representation.model/kontext-menu-items.html
-$dokka.location:foundation.representation.model/KontextMenuItem///PointingToDeclaration/-kontext-menu/foundation.representation.model/-kontext-menu-item/index.html
-$dokka.location:foundation.representation.model/KontextMenuItem/KontextMenuItem/#org.jetbrains.compose.resources.DrawableResource?#org.jetbrains.compose.resources.StringResource#ui.input.key.ContextMenuKeyShortcut?#kotlin.Boolean#kotlin.Function0[kotlin.Unit]?/PointingToDeclaration/-kontext-menu/foundation.representation.model/-kontext-menu-item/-kontext-menu-item.html
-$dokka.location:foundation.representation.model/KontextMenuItem/enabled/#/PointingToDeclaration/-kontext-menu/foundation.representation.model/-kontext-menu-item/enabled.html
-$dokka.location:foundation.representation.model/KontextMenuItem/label/#/PointingToDeclaration/-kontext-menu/foundation.representation.model/-kontext-menu-item/label.html
-$dokka.location:foundation.representation.model/KontextMenuItem/leadingIcon/#/PointingToDeclaration/-kontext-menu/foundation.representation.model/-kontext-menu-item/leading-icon.html
-$dokka.location:foundation.representation.model/KontextMenuItem/onClick/#/PointingToDeclaration/-kontext-menu/foundation.representation.model/-kontext-menu-item/on-click.html
-$dokka.location:foundation.representation.model/KontextMenuItem/shortcut/#/PointingToDeclaration/-kontext-menu/foundation.representation.model/-kontext-menu-item/shortcut.html
-$dokka.location:foundation.representation////PointingToDeclaration/-kontext-menu/foundation.representation/index.html
-$dokka.location:foundation.representation//LocalKontextMenuRepresentation/#/PointingToDeclaration/-kontext-menu/foundation.representation/-local-kontext-menu-representation.html
-$dokka.location:foundation.representation/ContainerizedKontextMenuRepresentation///PointingToDeclaration/-kontext-menu/foundation.representation/-containerized-kontext-menu-representation/index.html
-$dokka.location:foundation.representation/ContainerizedKontextMenuRepresentation/ContainerizedKontextMenuRepresentation/#/PointingToDeclaration/-kontext-menu/foundation.representation/-containerized-kontext-menu-representation/-containerized-kontext-menu-representation.html
-$dokka.location:foundation.representation/ContainerizedKontextMenuRepresentation/Representation/#androidx.compose.foundation.ContextMenuState#kotlin.Function2[kotlin.collections.List[TypeParam(bounds=[kotlin.Any?])],kotlin.Function0[kotlin.Unit]?,kotlin.Unit]#kotlin.collections.List[TypeParam(bounds=[kotlin.Any?])]/PointingToDeclaration/-kontext-menu/foundation.representation/-containerized-kontext-menu-representation/-representation.html
-$dokka.location:foundation.representation/KontextMenuRepresentation///PointingToDeclaration/-kontext-menu/foundation.representation/-kontext-menu-representation/index.html
-$dokka.location:foundation.representation/KontextMenuRepresentation/Representation/#androidx.compose.foundation.ContextMenuState#kotlin.Function2[kotlin.collections.List[TypeParam(bounds=[kotlin.Any?])],kotlin.Function0[kotlin.Unit]?,kotlin.Unit]#kotlin.collections.List[TypeParam(bounds=[kotlin.Any?])]/PointingToDeclaration/-kontext-menu/foundation.representation/-kontext-menu-representation/-representation.html
-$dokka.location:foundation.representation/UncontainerizedKontextMenuRepresentation///PointingToDeclaration/-kontext-menu/foundation.representation/-uncontainerized-kontext-menu-representation/index.html
-$dokka.location:foundation.representation/UncontainerizedKontextMenuRepresentation/Representation/#androidx.compose.foundation.ContextMenuState#kotlin.Function2[kotlin.collections.List[TypeParam(bounds=[kotlin.Any?])],kotlin.Function0[kotlin.Unit]?,kotlin.Unit]#kotlin.collections.List[TypeParam(bounds=[kotlin.Any?])]/PointingToDeclaration/-kontext-menu/foundation.representation/-uncontainerized-kontext-menu-representation/-representation.html
-$dokka.location:foundation.representation/UncontainerizedKontextMenuRepresentation/UncontainerizedKontextMenuRepresentation/#/PointingToDeclaration/-kontext-menu/foundation.representation/-uncontainerized-kontext-menu-representation/-uncontainerized-kontext-menu-representation.html
-$dokka.location:foundation////PointingToDeclaration/-kontext-menu/foundation/index.html
-$dokka.location:foundation//KontextMenu/#foundation.IKontextMenuArea[TypeParam(bounds=[kotlin.Any?])]#foundation.representation.KontextMenuRepresentation#kotlin.Function0[kotlin.Unit]/PointingToDeclaration/-kontext-menu/foundation/-kontext-menu.html
-$dokka.location:foundation//KontextMenu/#kotlin.collections.List[TypeParam(bounds=[kotlin.Any?])]#kotlin.Function2[kotlin.collections.List[TypeParam(bounds=[kotlin.Any?])],kotlin.Function0[kotlin.Unit]?,kotlin.Unit]#foundation.representation.KontextMenuRepresentation#kotlin.Function0[kotlin.Unit]/PointingToDeclaration/-kontext-menu/foundation/-kontext-menu.html
-$dokka.location:foundation//kontextMenuArea/#kotlin.Function2[kotlin.collections.List[TypeParam(bounds=[kotlin.Any?])],kotlin.Function0[kotlin.Unit]?,kotlin.Unit]#kotlin.Function1[foundation.Builder[TypeParam(bounds=[kotlin.Any?])],kotlin.Unit]/PointingToDeclaration/-kontext-menu/foundation/kontext-menu-area.html
-$dokka.location:foundation/Builder///PointingToDeclaration/-kontext-menu/foundation/-builder/index.html
-$dokka.location:foundation/Builder/Builder/#/PointingToDeclaration/-kontext-menu/foundation/-builder/-builder.html
-$dokka.location:foundation/Builder/add/TypeParam(bounds=[kotlin.Any?])#/PointingToDeclaration/-kontext-menu/foundation/-builder/add.html
-$dokka.location:foundation/Builder/addAll/kotlin.collections.List[TypeParam(bounds=[kotlin.Any?])]#/PointingToDeclaration/-kontext-menu/foundation/-builder/add-all.html
-$dokka.location:foundation/Builder/items/#/PointingToDeclaration/-kontext-menu/foundation/-builder/items.html
-$dokka.location:foundation/Builder/toKontextMenu/#kotlin.Function2[kotlin.collections.List[TypeParam(bounds=[kotlin.Any?])],kotlin.Function0[kotlin.Unit]?,kotlin.Unit]/PointingToDeclaration/-kontext-menu/foundation/-builder/to-kontext-menu.html
-$dokka.location:foundation/IKontextMenuArea///PointingToDeclaration/-kontext-menu/foundation/-i-kontext-menu-area/index.html
-$dokka.location:foundation/IKontextMenuArea/items/#/PointingToDeclaration/-kontext-menu/foundation/-i-kontext-menu-area/items.html
-$dokka.location:foundation/IKontextMenuArea/menuContent/#/PointingToDeclaration/-kontext-menu/foundation/-i-kontext-menu-area/menu-content.html
-$dokka.location:ui.input.key////PointingToDeclaration/-kontext-menu/ui.input.key/index.html
-$dokka.location:ui.input.key/ContextMenuKeyShortcut.Companion///PointingToDeclaration/-kontext-menu/ui.input.key/-context-menu-key-shortcut/-companion/index.html
-$dokka.location:ui.input.key/ContextMenuKeyShortcut.Companion/Alt/#/PointingToDeclaration/-kontext-menu/ui.input.key/-context-menu-key-shortcut/-companion/-alt.html
-$dokka.location:ui.input.key/ContextMenuKeyShortcut.Companion/Control/#/PointingToDeclaration/-kontext-menu/ui.input.key/-context-menu-key-shortcut/-companion/-control.html
-$dokka.location:ui.input.key/ContextMenuKeyShortcut.Companion/Meta/#/PointingToDeclaration/-kontext-menu/ui.input.key/-context-menu-key-shortcut/-companion/-meta.html
-$dokka.location:ui.input.key/ContextMenuKeyShortcut.Companion/Shift/#/PointingToDeclaration/-kontext-menu/ui.input.key/-context-menu-key-shortcut/-companion/-shift.html
-$dokka.location:ui.input.key/ContextMenuKeyShortcut///PointingToDeclaration/-kontext-menu/ui.input.key/-context-menu-key-shortcut/index.html
-$dokka.location:ui.input.key/ContextMenuKeyShortcut/ContextMenuKeyShortcut/#androidx.compose.ui.input.key.Key#kotlin.Boolean#kotlin.Boolean#kotlin.Boolean#kotlin.Boolean/PointingToDeclaration/-kontext-menu/ui.input.key/-context-menu-key-shortcut/-context-menu-key-shortcut.html
-$dokka.location:ui.input.key/ContextMenuKeyShortcut/alt/#/PointingToDeclaration/-kontext-menu/ui.input.key/-context-menu-key-shortcut/alt.html
-$dokka.location:ui.input.key/ContextMenuKeyShortcut/ctrl/#/PointingToDeclaration/-kontext-menu/ui.input.key/-context-menu-key-shortcut/ctrl.html
-$dokka.location:ui.input.key/ContextMenuKeyShortcut/equals/#kotlin.Any?/PointingToDeclaration/-kontext-menu/ui.input.key/-context-menu-key-shortcut/equals.html
-$dokka.location:ui.input.key/ContextMenuKeyShortcut/getKeyStroke/#/PointingToDeclaration/-kontext-menu/ui.input.key/-context-menu-key-shortcut/get-key-stroke.html
-$dokka.location:ui.input.key/ContextMenuKeyShortcut/getKeyText/#/PointingToDeclaration/-kontext-menu/ui.input.key/-context-menu-key-shortcut/get-key-text.html
-$dokka.location:ui.input.key/ContextMenuKeyShortcut/hashCode/#/PointingToDeclaration/-kontext-menu/ui.input.key/-context-menu-key-shortcut/hash-code.html
-$dokka.location:ui.input.key/ContextMenuKeyShortcut/key/#/PointingToDeclaration/-kontext-menu/ui.input.key/-context-menu-key-shortcut/key.html
-$dokka.location:ui.input.key/ContextMenuKeyShortcut/meta/#/PointingToDeclaration/-kontext-menu/ui.input.key/-context-menu-key-shortcut/meta.html
-$dokka.location:ui.input.key/ContextMenuKeyShortcut/shift/#/PointingToDeclaration/-kontext-menu/ui.input.key/-context-menu-key-shortcut/shift.html
-$dokka.location:ui.input.key/ContextMenuKeyShortcut/toString/#/PointingToDeclaration/-kontext-menu/ui.input.key/-context-menu-key-shortcut/to-string.html
-foundation
-foundation.composable
-foundation.material
-foundation.material3
-foundation.representation
-foundation.representation.model
-ui.input.key
+$dokka.location:io.github.joshmcrose.material////PointingToDeclaration/-kontext-menu/io.github.joshmcrose.material/index.html
+$dokka.location:io.github.joshmcrose.material//KontextIcon/#org.jetbrains.compose.resources.DrawableResource#kotlin.Boolean/PointingToDeclaration/-kontext-menu/io.github.joshmcrose.material/-kontext-icon.html
+$dokka.location:io.github.joshmcrose.material//KontextMenu/#kotlin.Function0[kotlin.Unit]?#kotlin.Function0[kotlin.Unit]?#kotlin.Function0[kotlin.Unit]?#kotlin.Function0[kotlin.Unit]/PointingToDeclaration/-kontext-menu/io.github.joshmcrose.material/-kontext-menu.html
+$dokka.location:io.github.joshmcrose.material//KontextMenuText/#kotlin.String#kotlin.Boolean/PointingToDeclaration/-kontext-menu/io.github.joshmcrose.material/-kontext-menu-text.html
+$dokka.location:io.github.joshmcrose.material3////PointingToDeclaration/-kontext-menu/io.github.joshmcrose.material3/index.html
+$dokka.location:io.github.joshmcrose.material3//DialogKontextMenu/#kotlin.Function0[kotlin.Unit]?#kotlin.Function0[kotlin.Unit]?#kotlin.Function0[kotlin.Unit]?#kotlin.Function0[kotlin.Unit]/PointingToDeclaration/-kontext-menu/io.github.joshmcrose.material3/-dialog-kontext-menu.html
+$dokka.location:io.github.joshmcrose.material3//KontextIcon/#org.jetbrains.compose.resources.DrawableResource#kotlin.Boolean/PointingToDeclaration/-kontext-menu/io.github.joshmcrose.material3/-kontext-icon.html
+$dokka.location:io.github.joshmcrose.material3//KontextMenu/#kotlin.Function0[kotlin.Unit]?#kotlin.Function0[kotlin.Unit]?#kotlin.Function0[kotlin.Unit]?#kotlin.Function0[kotlin.Unit]/PointingToDeclaration/-kontext-menu/io.github.joshmcrose.material3/-kontext-menu.html
+$dokka.location:io.github.joshmcrose.material3//KontextMenuBody/#androidx.compose.ui.Modifier#kotlin.Function1[androidx.compose.foundation.layout.ColumnScope,kotlin.Unit]/PointingToDeclaration/-kontext-menu/io.github.joshmcrose.material3/-kontext-menu-body.html
+$dokka.location:io.github.joshmcrose.material3//KontextMenuText/#kotlin.String#kotlin.Boolean#androidx.compose.ui.graphics.Color/PointingToDeclaration/-kontext-menu/io.github.joshmcrose.material3/-kontext-menu-text.html
+$dokka.location:io.github.joshmcrose.representation.model////PointingToDeclaration/-kontext-menu/io.github.joshmcrose.representation.model/index.html
+$dokka.location:io.github.joshmcrose.representation.model//kontextMenuItems/#kotlin.Function0[kotlin.Unit]?#kotlin.Function0[kotlin.Unit]?#kotlin.Function0[kotlin.Unit]?/PointingToDeclaration/-kontext-menu/io.github.joshmcrose.representation.model/kontext-menu-items.html
+$dokka.location:io.github.joshmcrose.representation.model/KontextMenuItem///PointingToDeclaration/-kontext-menu/io.github.joshmcrose.representation.model/-kontext-menu-item/index.html
+$dokka.location:io.github.joshmcrose.representation.model/KontextMenuItem/KontextMenuItem/#org.jetbrains.compose.resources.DrawableResource?#org.jetbrains.compose.resources.StringResource#io.github.joshmcrose.KontextMenuKeyShortcut?#kotlin.Boolean#kotlin.Function0[kotlin.Unit]?/PointingToDeclaration/-kontext-menu/io.github.joshmcrose.representation.model/-kontext-menu-item/-kontext-menu-item.html
+$dokka.location:io.github.joshmcrose.representation.model/KontextMenuItem/enabled/#/PointingToDeclaration/-kontext-menu/io.github.joshmcrose.representation.model/-kontext-menu-item/enabled.html
+$dokka.location:io.github.joshmcrose.representation.model/KontextMenuItem/label/#/PointingToDeclaration/-kontext-menu/io.github.joshmcrose.representation.model/-kontext-menu-item/label.html
+$dokka.location:io.github.joshmcrose.representation.model/KontextMenuItem/leadingIcon/#/PointingToDeclaration/-kontext-menu/io.github.joshmcrose.representation.model/-kontext-menu-item/leading-icon.html
+$dokka.location:io.github.joshmcrose.representation.model/KontextMenuItem/onClick/#/PointingToDeclaration/-kontext-menu/io.github.joshmcrose.representation.model/-kontext-menu-item/on-click.html
+$dokka.location:io.github.joshmcrose.representation.model/KontextMenuItem/shortcut/#/PointingToDeclaration/-kontext-menu/io.github.joshmcrose.representation.model/-kontext-menu-item/shortcut.html
+$dokka.location:io.github.joshmcrose.representation////PointingToDeclaration/-kontext-menu/io.github.joshmcrose.representation/index.html
+$dokka.location:io.github.joshmcrose.representation//LocalKontextMenuRepresentation/#/PointingToDeclaration/-kontext-menu/io.github.joshmcrose.representation/-local-kontext-menu-representation.html
+$dokka.location:io.github.joshmcrose.representation/ContainerizedKontextMenuRepresentation///PointingToDeclaration/-kontext-menu/io.github.joshmcrose.representation/-containerized-kontext-menu-representation/index.html
+$dokka.location:io.github.joshmcrose.representation/ContainerizedKontextMenuRepresentation/ContainerizedKontextMenuRepresentation/#/PointingToDeclaration/-kontext-menu/io.github.joshmcrose.representation/-containerized-kontext-menu-representation/-containerized-kontext-menu-representation.html
+$dokka.location:io.github.joshmcrose.representation/ContainerizedKontextMenuRepresentation/Representation/#androidx.compose.foundation.ContextMenuState#kotlin.Function2[kotlin.collections.List[TypeParam(bounds=[kotlin.Any?])],kotlin.Function0[kotlin.Unit]?,kotlin.Unit]#kotlin.collections.List[TypeParam(bounds=[kotlin.Any?])]/PointingToDeclaration/-kontext-menu/io.github.joshmcrose.representation/-containerized-kontext-menu-representation/-representation.html
+$dokka.location:io.github.joshmcrose.representation/KontextMenuRepresentation///PointingToDeclaration/-kontext-menu/io.github.joshmcrose.representation/-kontext-menu-representation/index.html
+$dokka.location:io.github.joshmcrose.representation/KontextMenuRepresentation/Representation/#androidx.compose.foundation.ContextMenuState#kotlin.Function2[kotlin.collections.List[TypeParam(bounds=[kotlin.Any?])],kotlin.Function0[kotlin.Unit]?,kotlin.Unit]#kotlin.collections.List[TypeParam(bounds=[kotlin.Any?])]/PointingToDeclaration/-kontext-menu/io.github.joshmcrose.representation/-kontext-menu-representation/-representation.html
+$dokka.location:io.github.joshmcrose.representation/UncontainerizedKontextMenuRepresentation///PointingToDeclaration/-kontext-menu/io.github.joshmcrose.representation/-uncontainerized-kontext-menu-representation/index.html
+$dokka.location:io.github.joshmcrose.representation/UncontainerizedKontextMenuRepresentation/Representation/#androidx.compose.foundation.ContextMenuState#kotlin.Function2[kotlin.collections.List[TypeParam(bounds=[kotlin.Any?])],kotlin.Function0[kotlin.Unit]?,kotlin.Unit]#kotlin.collections.List[TypeParam(bounds=[kotlin.Any?])]/PointingToDeclaration/-kontext-menu/io.github.joshmcrose.representation/-uncontainerized-kontext-menu-representation/-representation.html
+$dokka.location:io.github.joshmcrose.representation/UncontainerizedKontextMenuRepresentation/UncontainerizedKontextMenuRepresentation/#/PointingToDeclaration/-kontext-menu/io.github.joshmcrose.representation/-uncontainerized-kontext-menu-representation/-uncontainerized-kontext-menu-representation.html
+$dokka.location:io.github.joshmcrose.ui////PointingToDeclaration/-kontext-menu/io.github.joshmcrose.ui/index.html
+$dokka.location:io.github.joshmcrose.ui//KontextMenuPopup/#androidx.compose.foundation.ContextMenuState.Status.Open#kotlin.Function0[kotlin.Unit]?#kotlin.Function1[kotlin.Function0[kotlin.Unit]?,kotlin.Unit]/PointingToDeclaration/-kontext-menu/io.github.joshmcrose.ui/-kontext-menu-popup.html
+$dokka.location:io.github.joshmcrose.ui//onHover/androidx.compose.ui.Modifier#kotlin.Function1[kotlin.Boolean,kotlin.Unit]/PointingToDeclaration/-kontext-menu/io.github.joshmcrose.ui/on-hover.html
+$dokka.location:io.github.joshmcrose////PointingToDeclaration/-kontext-menu/io.github.joshmcrose/index.html
+$dokka.location:io.github.joshmcrose//KontextMenu/#io.github.joshmcrose.IKontextMenuArea[TypeParam(bounds=[kotlin.Any?])]#io.github.joshmcrose.representation.KontextMenuRepresentation#kotlin.Function0[kotlin.Unit]/PointingToDeclaration/-kontext-menu/io.github.joshmcrose/-kontext-menu.html
+$dokka.location:io.github.joshmcrose//KontextMenu/#kotlin.collections.List[TypeParam(bounds=[kotlin.Any?])]#kotlin.Function2[kotlin.collections.List[TypeParam(bounds=[kotlin.Any?])],kotlin.Function0[kotlin.Unit]?,kotlin.Unit]#io.github.joshmcrose.representation.KontextMenuRepresentation#kotlin.Function0[kotlin.Unit]/PointingToDeclaration/-kontext-menu/io.github.joshmcrose/-kontext-menu.html
+$dokka.location:io.github.joshmcrose//kontextMenuArea/#kotlin.Function2[kotlin.collections.List[TypeParam(bounds=[kotlin.Any?])],kotlin.Function0[kotlin.Unit]?,kotlin.Unit]#kotlin.Function1[io.github.joshmcrose.Builder[TypeParam(bounds=[kotlin.Any?])],kotlin.Unit]/PointingToDeclaration/-kontext-menu/io.github.joshmcrose/kontext-menu-area.html
+$dokka.location:io.github.joshmcrose/Builder///PointingToDeclaration/-kontext-menu/io.github.joshmcrose/-builder/index.html
+$dokka.location:io.github.joshmcrose/Builder/Builder/#/PointingToDeclaration/-kontext-menu/io.github.joshmcrose/-builder/-builder.html
+$dokka.location:io.github.joshmcrose/Builder/add/TypeParam(bounds=[kotlin.Any?])#/PointingToDeclaration/-kontext-menu/io.github.joshmcrose/-builder/add.html
+$dokka.location:io.github.joshmcrose/Builder/addAll/kotlin.collections.List[TypeParam(bounds=[kotlin.Any?])]#/PointingToDeclaration/-kontext-menu/io.github.joshmcrose/-builder/add-all.html
+$dokka.location:io.github.joshmcrose/Builder/items/#/PointingToDeclaration/-kontext-menu/io.github.joshmcrose/-builder/items.html
+$dokka.location:io.github.joshmcrose/Builder/toKontextMenu/#kotlin.Function2[kotlin.collections.List[TypeParam(bounds=[kotlin.Any?])],kotlin.Function0[kotlin.Unit]?,kotlin.Unit]/PointingToDeclaration/-kontext-menu/io.github.joshmcrose/-builder/to-kontext-menu.html
+$dokka.location:io.github.joshmcrose/IKontextMenuArea///PointingToDeclaration/-kontext-menu/io.github.joshmcrose/-i-kontext-menu-area/index.html
+$dokka.location:io.github.joshmcrose/IKontextMenuArea/items/#/PointingToDeclaration/-kontext-menu/io.github.joshmcrose/-i-kontext-menu-area/items.html
+$dokka.location:io.github.joshmcrose/IKontextMenuArea/menuContent/#/PointingToDeclaration/-kontext-menu/io.github.joshmcrose/-i-kontext-menu-area/menu-content.html
+$dokka.location:io.github.joshmcrose/KontextMenuKeyShortcut.Companion///PointingToDeclaration/-kontext-menu/io.github.joshmcrose/-kontext-menu-key-shortcut/-companion/index.html
+$dokka.location:io.github.joshmcrose/KontextMenuKeyShortcut.Companion/Alt/#/PointingToDeclaration/-kontext-menu/io.github.joshmcrose/-kontext-menu-key-shortcut/-companion/-alt.html
+$dokka.location:io.github.joshmcrose/KontextMenuKeyShortcut.Companion/Control/#/PointingToDeclaration/-kontext-menu/io.github.joshmcrose/-kontext-menu-key-shortcut/-companion/-control.html
+$dokka.location:io.github.joshmcrose/KontextMenuKeyShortcut.Companion/Meta/#/PointingToDeclaration/-kontext-menu/io.github.joshmcrose/-kontext-menu-key-shortcut/-companion/-meta.html
+$dokka.location:io.github.joshmcrose/KontextMenuKeyShortcut.Companion/Shift/#/PointingToDeclaration/-kontext-menu/io.github.joshmcrose/-kontext-menu-key-shortcut/-companion/-shift.html
+$dokka.location:io.github.joshmcrose/KontextMenuKeyShortcut///PointingToDeclaration/-kontext-menu/io.github.joshmcrose/-kontext-menu-key-shortcut/index.html
+$dokka.location:io.github.joshmcrose/KontextMenuKeyShortcut/KontextMenuKeyShortcut/#androidx.compose.ui.input.key.Key#kotlin.Boolean#kotlin.Boolean#kotlin.Boolean#kotlin.Boolean/PointingToDeclaration/-kontext-menu/io.github.joshmcrose/-kontext-menu-key-shortcut/-kontext-menu-key-shortcut.html
+$dokka.location:io.github.joshmcrose/KontextMenuKeyShortcut/alt/#/PointingToDeclaration/-kontext-menu/io.github.joshmcrose/-kontext-menu-key-shortcut/alt.html
+$dokka.location:io.github.joshmcrose/KontextMenuKeyShortcut/ctrl/#/PointingToDeclaration/-kontext-menu/io.github.joshmcrose/-kontext-menu-key-shortcut/ctrl.html
+$dokka.location:io.github.joshmcrose/KontextMenuKeyShortcut/equals/#kotlin.Any?/PointingToDeclaration/-kontext-menu/io.github.joshmcrose/-kontext-menu-key-shortcut/equals.html
+$dokka.location:io.github.joshmcrose/KontextMenuKeyShortcut/getKeyStroke/#/PointingToDeclaration/-kontext-menu/io.github.joshmcrose/-kontext-menu-key-shortcut/get-key-stroke.html
+$dokka.location:io.github.joshmcrose/KontextMenuKeyShortcut/getKeyText/#/PointingToDeclaration/-kontext-menu/io.github.joshmcrose/-kontext-menu-key-shortcut/get-key-text.html
+$dokka.location:io.github.joshmcrose/KontextMenuKeyShortcut/hashCode/#/PointingToDeclaration/-kontext-menu/io.github.joshmcrose/-kontext-menu-key-shortcut/hash-code.html
+$dokka.location:io.github.joshmcrose/KontextMenuKeyShortcut/key/#/PointingToDeclaration/-kontext-menu/io.github.joshmcrose/-kontext-menu-key-shortcut/key.html
+$dokka.location:io.github.joshmcrose/KontextMenuKeyShortcut/meta/#/PointingToDeclaration/-kontext-menu/io.github.joshmcrose/-kontext-menu-key-shortcut/meta.html
+$dokka.location:io.github.joshmcrose/KontextMenuKeyShortcut/shift/#/PointingToDeclaration/-kontext-menu/io.github.joshmcrose/-kontext-menu-key-shortcut/shift.html
+$dokka.location:io.github.joshmcrose/KontextMenuKeyShortcut/toString/#/PointingToDeclaration/-kontext-menu/io.github.joshmcrose/-kontext-menu-key-shortcut/to-string.html
+io.github.joshmcrose
+io.github.joshmcrose.material
+io.github.joshmcrose.material3
+io.github.joshmcrose.representation
+io.github.joshmcrose.representation.model
+io.github.joshmcrose.ui
