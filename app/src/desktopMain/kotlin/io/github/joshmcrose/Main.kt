@@ -50,7 +50,7 @@ fun main() {
             window.minimumSize = Dimension(600.dp.value.toInt(), 400.dp.value.toInt())
 
             AppTheme(isDarkTheme = isDarkTheme) {
-                Surface(modifier = Modifier.fillMaxSize(),) {
+                Surface(modifier = Modifier.fillMaxSize()) {
                     var selectedImplementation by remember { mutableStateOf(Implementations.M3) }
                     var text by remember { mutableStateOf(TextFieldValue()) }
 
@@ -128,7 +128,7 @@ fun Menu(
 ) {
     when (implementations) {
         Implementations.M3 -> {
-            foundation.material3.ContextMenu(
+            foundation.material3.KontextMenu(
                 cut = cut,
                 copy = copy,
                 paste = paste,
@@ -136,7 +136,7 @@ fun Menu(
             )
         }
         Implementations.M2 -> {
-            foundation.material.ContextMenu(
+            foundation.material.KontextMenu(
                 cut = cut,
                 copy = copy,
                 paste = paste,
@@ -144,7 +144,7 @@ fun Menu(
             )
         }
         Implementations.M3Dialog -> {
-            foundation.material3.DialogContextMenu(
+            foundation.material3.DialogKontextMenu(
                 cut = cut,
                 copy = copy,
                 paste = paste,

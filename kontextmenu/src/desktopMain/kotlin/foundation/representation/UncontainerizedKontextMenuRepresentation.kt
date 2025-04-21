@@ -4,14 +4,14 @@ import androidx.compose.foundation.ContextMenuState
 import androidx.compose.runtime.Composable
 
 /**
- * Dialog implementation of [TextContextMenuRepresentation] that provides minimal structure.
+ * Implementation of [KontextMenuRepresentation] that provides minimal structure.
  *
- * Unlike [DefaultTextContextMenuRepresentation], this implementation doesn't provide any UI container.
+ * Unlike [ContainerizedKontextMenuRepresentation], this implementation doesn't provide any UI container.
  * It only handles the context menu state and provides the onDismissRequest lambda to the content.
  * This allows developers to create a completely custom UI for their context menus, such as dialogs
  * or other complex components.
  */
-class DialogTextContextMenuRepresentation : TextContextMenuRepresentation {
+class UncontainerizedKontextMenuRepresentation : KontextMenuRepresentation {
     /**
      * Creates a minimal representation of the context menu without any UI container.
      *

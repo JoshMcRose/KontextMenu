@@ -12,11 +12,11 @@ import androidx.compose.runtime.staticCompositionLocalOf
  * should be displayed. Implementations can range from simple popups to complex dialogs or
  * custom UI components.
  *
- * @see [DefaultTextContextMenuRepresentation]
- * @see [DialogTextContextMenuRepresentation]
+ * @see [ContainerizedKontextMenuRepresentation]
+ * @see [UncontainerizedKontextMenuRepresentation]
  *
  */
-interface TextContextMenuRepresentation {
+interface KontextMenuRepresentation {
     /**
      * Creates the visual representation of the context menu.
      *
@@ -38,5 +38,5 @@ interface TextContextMenuRepresentation {
  * This allows components to access the current representation without having to pass it
  * explicitly through the composition tree.
  */
-val LocalTextContextMenuRepresentation: ProvidableCompositionLocal<TextContextMenuRepresentation> =
-    staticCompositionLocalOf { DefaultTextContextMenuRepresentation() }
+val LocalKontextMenuRepresentation: ProvidableCompositionLocal<KontextMenuRepresentation> =
+    staticCompositionLocalOf { ContainerizedKontextMenuRepresentation() }

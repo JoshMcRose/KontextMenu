@@ -35,7 +35,7 @@ import java.awt.event.KeyEvent.VK_UP
  */
 @OptIn(ExperimentalComposeUiApi::class)
 @Composable
-fun DefaultContextMenuPopup(
+fun KontextMenuPopup(
     status: ContextMenuState.Status.Open,
     onDismissRequest: (() -> Unit)? = null,
     content: @Composable ((() -> Unit)?) -> Unit,

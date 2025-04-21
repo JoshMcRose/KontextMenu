@@ -43,7 +43,7 @@ class TextContextMenuAreaTest {
 
         // Act
         val menuContent: @Composable (items: List<String>, onDismissRequest: (() -> Unit)?) -> Unit = { _, _ -> }
-        val textContextMenu = builder.toTextContextMenu(menuContent)
+        val textContextMenu = builder.toKontextMenu(menuContent)
 
         // Assert
         assertEquals(items, textContextMenu.items)

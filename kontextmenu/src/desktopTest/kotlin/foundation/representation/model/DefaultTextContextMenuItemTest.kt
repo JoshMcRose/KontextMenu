@@ -16,7 +16,7 @@ class DefaultTextContextMenuItemTest {
         val paste = { }
 
         // Act
-        val items = defaultTextContextMenuItems(cut, copy, paste)
+        val items = kontextMenuItems(cut, copy, paste)
 
         // Assert
         assertEquals(3, items.size)
@@ -34,7 +34,7 @@ class DefaultTextContextMenuItemTest {
     @Test
     fun `test defaultTextContextMenuItems with null operations`() {
         // Arrange & Act
-        val items = defaultTextContextMenuItems(null, null, null)
+        val items = kontextMenuItems(null, null, null)
 
         // Assert
         assertEquals(3, items.size)

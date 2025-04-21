@@ -15,12 +15,12 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import foundation.TextContextMenu
-import foundation.textContextMenuArea
+import foundation.KontextMenu
+import foundation.kontextMenuArea
 import foundation.composable.onHover
-import foundation.representation.DialogTextContextMenuRepresentation
-import foundation.representation.model.DefaultTextContextMenuItem
-import foundation.representation.model.defaultTextContextMenuItems
+import foundation.representation.UncontainerizedKontextMenuRepresentation
+import foundation.representation.model.KontextMenuItem
+import foundation.representation.model.kontextMenuItems
 import kontextmenu.kontextmenu.generated.resources.Res
 import kontextmenu.kontextmenu.generated.resources.*
 import org.jetbrains.compose.resources.painterResource
@@ -39,18 +39,18 @@ import org.jetbrains.compose.resources.stringResource
  */
 @Suppress("unused")
 @Composable
-fun DialogContextMenu(
+fun DialogKontextMenu(
     cut: (() -> Unit)?,
     copy: (() -> Unit)?,
     paste: (() -> Unit)?,
     content: @Composable () -> Unit
 ) {
-    TextContextMenu(
+    KontextMenu(
         content = content,
-        textContextMenuRepresentation = DialogTextContextMenuRepresentation(),
-        textContextMenuArea = textContextMenuArea(
-            menuContent = { items, onDismissRequest -> DialogContextMenuBody(items, onDismissRequest) },
-            builder = { defaultTextContextMenuItems(cut, copy, paste).addAll() }
+        kontextMenuRepresentation = UncontainerizedKontextMenuRepresentation(),
+        kontextMenuArea = kontextMenuArea(
+            menuContent = { items, onDismissRequest -> DialogKontextMenuBody(items, onDismissRequest) },
+            builder = { kontextMenuItems(cut, copy, paste).addAll() }
         )
     )
 }
@@ -67,12 +67,12 @@ fun DialogContextMenu(
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-private fun DialogContextMenuBody(
-    items: List<DefaultTextContextMenuItem>,
+private fun DialogKontextMenuBody(
+    items: List<KontextMenuItem>,
     onDismiss: (() -> Unit)?,
     modifier: Modifier = Modifier
 ) {
-    var selectedItem by remember { mutableStateOf<DefaultTextContextMenuItem?>(null) }
+    var selectedItem by remember { mutableStateOf<KontextMenuItem?>(null) }
 
     BasicAlertDialog(
         onDismissRequest = { onDismiss?.invoke() },
@@ -147,10 +147,10 @@ private fun DialogContextMenuBody(
  */
 @Composable
 private fun ActionBox(
-    items: List<DefaultTextContextMenuItem>,
-    selected: DefaultTextContextMenuItem?,
+    items: List<KontextMenuItem>,
+    selected: KontextMenuItem?,
     modifier: Modifier = Modifier,
-    onSelection: (DefaultTextContextMenuItem) -> Unit
+    onSelection: (KontextMenuItem) -> Unit
 ) {
     Column(
         modifier = modifier
@@ -180,10 +180,10 @@ private fun ActionBox(
  */
 @Composable
 private fun ActionRow(
-    item: DefaultTextContextMenuItem,
+    item: KontextMenuItem,
     selected: Boolean,
     modifier: Modifier = Modifier,
-    onSelect: (DefaultTextContextMenuItem) -> Unit
+    onSelect: (KontextMenuItem) -> Unit
 ) {
     var hovered by remember { mutableStateOf(false) }
 

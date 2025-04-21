@@ -11,9 +11,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Rect
-import foundation.representation.DefaultTextContextMenuRepresentation
-import foundation.representation.LocalTextContextMenuRepresentation
-import foundation.representation.TextContextMenuRepresentation
+import foundation.representation.ContainerizedKontextMenuRepresentation
+import foundation.representation.LocalKontextMenuRepresentation
+import foundation.representation.KontextMenuRepresentation
 
 /**
  * Main interface for creating custom context menus in text fields.
@@ -21,15 +21,15 @@ import foundation.representation.TextContextMenuRepresentation
  * This interface implements the [TextContextMenu] interface and provides a way to create
  * custom context menus with a list of items and a composable function to display them.
  *
- * In most cases, the default [TextContextMenuArea] class should be used to create a context menu.
- * The [textContextMenuArea] function provides public access to the builder pattern for creating custom context menus.
+ * In most cases, the default [KontextMenuArea] class should be used to create a context menu.
+ * The [kontextMenuArea] function provides public access to the builder pattern for creating custom context menus.
  *
  * @param T The type of items to be displayed in the context menu
  * @property items The list of items to be displayed in the context menu
  * @property menuContent A composable function that renders the content of the menu
  */
 @OptIn(ExperimentalFoundationApi::class)
-interface ITextContextMenuArea<T> : TextContextMenu {
+interface IKontextMenuArea<T> : TextContextMenu {
     val items: List<T>
     val menuContent: @Composable (items: List<T>, onDismissRequest: (() -> Unit)?) -> Unit
 }
@@ -58,10 +58,10 @@ class Builder<T>() {
     /**
      * Creates a TextContextMenuArea with the collected items and the provided menu content.
      */
-    fun toTextContextMenu(
+    fun toKontextMenu(
         menuContent: @Composable (items: List<T>, onDismissRequest: (() -> Unit)?) -> Unit
-    ): ITextContextMenuArea<T> =
-        TextContextMenuArea(_items) { items, onDismissRequest ->
+    ): IKontextMenuArea<T> =
+        KontextMenuArea(_items) { items, onDismissRequest ->
             menuContent(items, onDismissRequest)
         }
 }
@@ -69,7 +69,7 @@ class Builder<T>() {
 /**
  * Default class for creating custom context menus in text fields.
  *
- * This class implements the [ITextContextMenuArea] interface and provides a way to create
+ * This class implements the [IKontextMenuArea] interface and provides a way to create
  * custom context menus with a list of items and a composable function to display them.
  *
  * @param T The type of items to be displayed in the context menu
@@ -77,10 +77,10 @@ class Builder<T>() {
  * @property menuContent A composable function that renders the content of the menu
  */
 @OptIn(ExperimentalFoundationApi::class)
-internal class TextContextMenuArea<T>(
+internal class KontextMenuArea<T>(
     override val items: List<T>,
     override val menuContent: @Composable (items: List<T>, onDismissRequest: (() -> Unit)?) -> Unit
-) : ITextContextMenuArea<T> {
+) : IKontextMenuArea<T> {
     /**
      * Implements the Area function from the TextContextMenu interface.
      *
@@ -93,7 +93,7 @@ internal class TextContextMenuArea<T>(
         textManager: TextManager,
         state: ContextMenuState,
         content: @Composable (() -> Unit)
-    ) { TextContextMenuArea(textManager, items, state, menuContent, content) }
+    ) { KontextMenuArea(textManager, items, state, menuContent, content) }
 }
 
 /**
@@ -101,7 +101,7 @@ internal class TextContextMenuArea<T>(
  * This composable function sets up a context menu with the provided items.
  *
  * If a custom implementation of this Composable is needed (for example, if platform-specific functionality is needed),
- * in addition to creating a new Composable, you will need to extend the [ITextContextMenuArea] interface and apply your composable to the `Area` function.
+ * in addition to creating a new Composable, you will need to extend the [IKontextMenuArea] interface and apply your composable to the `Area` function.
  *
  * @param textManager The text manager that handles text operations
  * @param items The list of context menu items to display
@@ -111,7 +111,7 @@ internal class TextContextMenuArea<T>(
  */
 @ExperimentalFoundationApi
 @Composable
-private fun <T> TextContextMenuArea(
+private fun <T> KontextMenuArea(
     textManager: TextManager,
     items: List<T>,
     state: ContextMenuState,
@@ -128,7 +128,7 @@ private fun <T> TextContextMenuArea(
         propagateMinConstraints = true,
     ) {
         content()
-        LocalTextContextMenuRepresentation.current.Representation(state, menuContent, items)
+        LocalKontextMenuRepresentation.current.Representation(state, menuContent, items)
     }
 }
 
@@ -141,10 +141,10 @@ private fun <T> TextContextMenuArea(
  * @param builder A builder function to configure the TextContextMenuArea
  * @return A configured TextContextMenuArea
  */
-inline fun <T> textContextMenuArea(
+inline fun <T> kontextMenuArea(
     noinline menuContent: @Composable (items: List<T>, onDismissRequest: (() -> Unit)?) -> Unit,
     builder: Builder<T>.() -> Unit
-) = Builder<T>().apply(builder).toTextContextMenu(menuContent)
+) = Builder<T>().apply(builder).toKontextMenu(menuContent)
 
 /**
  * Creates a text context menu with the provided items and menu content.
@@ -154,19 +154,19 @@ inline fun <T> textContextMenuArea(
  *
  * @param items The list of items to be displayed in the context menu
  * @param menuContent A composable function that renders the content of the menu
- * @param textContextMenuRepresentation The representation to use for the context menu
+ * @param kontextMenuRepresentation The representation to use for the context menu
  * @param content The content to display in the context menu area
  */
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
-fun <T> TextContextMenu(
+fun <T> KontextMenu(
     items: List<T>,
     menuContent: @Composable (items: List<T>, onDismissRequest: (() -> Unit)?) -> Unit,
-    textContextMenuRepresentation: TextContextMenuRepresentation = DefaultTextContextMenuRepresentation(),
+    kontextMenuRepresentation: KontextMenuRepresentation = ContainerizedKontextMenuRepresentation(),
     content: @Composable () -> Unit
 ) = CompositionLocalProvider(
-    LocalTextContextMenuRepresentation provides textContextMenuRepresentation,
-    LocalTextContextMenu provides TextContextMenuArea(items, menuContent)
+    LocalKontextMenuRepresentation provides kontextMenuRepresentation,
+    LocalTextContextMenu provides KontextMenuArea(items, menuContent)
 ) { content() }
 
 /**
@@ -175,17 +175,17 @@ fun <T> TextContextMenu(
  * This function sets up a text context menu with the provided TextContextMenuArea
  * and provides it to the content through CompositionLocalProvider.
  *
- * @param textContextMenuArea The TextContextMenuArea to use
- * @param textContextMenuRepresentation The representation to use for the context menu
+ * @param kontextMenuArea The TextContextMenuArea to use
+ * @param kontextMenuRepresentation The representation to use for the context menu
  * @param content The content to display in the context menu area
  */
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
-fun <T> TextContextMenu(
-    textContextMenuArea: ITextContextMenuArea<T>,
-    textContextMenuRepresentation: TextContextMenuRepresentation = DefaultTextContextMenuRepresentation(),
+fun <T> KontextMenu(
+    kontextMenuArea: IKontextMenuArea<T>,
+    kontextMenuRepresentation: KontextMenuRepresentation = ContainerizedKontextMenuRepresentation(),
     content: @Composable () -> Unit
 ) = CompositionLocalProvider(
-    LocalTextContextMenuRepresentation provides textContextMenuRepresentation,
-    LocalTextContextMenu provides textContextMenuArea
+    LocalKontextMenuRepresentation provides kontextMenuRepresentation,
+    LocalTextContextMenu provides kontextMenuArea
 ) { content() }

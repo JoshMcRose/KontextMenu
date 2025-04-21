@@ -22,7 +22,7 @@ import ui.input.key.ContextMenuKeyShortcut
  * @property enabled Whether this menu item is enabled
  * @property onClick Optional callback to invoke when this menu item is clicked
  */
-data class DefaultTextContextMenuItem(
+data class KontextMenuItem(
     val leadingIcon: DrawableResource?,
     val label: StringResource,
     val shortcut: ContextMenuKeyShortcut?,
@@ -42,13 +42,13 @@ data class DefaultTextContextMenuItem(
  * @param paste Optional callback for the paste operation
  * @return A list of DefaultTextContextMenuItem objects
  */
-fun defaultTextContextMenuItems(
+fun kontextMenuItems(
     cut: (() -> Unit)?,
     copy: (() -> Unit)?,
     paste: (() -> Unit)?
-): List<DefaultTextContextMenuItem> =
-    Builder<DefaultTextContextMenuItem>().apply {
-        DefaultTextContextMenuItem(
+): List<KontextMenuItem> =
+    Builder<KontextMenuItem>().apply {
+        KontextMenuItem(
             leadingIcon = Res.drawable.content_cut,
             label = Res.string.cut,
             shortcut = ContextMenuKeyShortcut(key = Key.X, ctrl = hostOs == OS.Windows, meta = hostOs == OS.MacOS),
@@ -56,7 +56,7 @@ fun defaultTextContextMenuItems(
             onClick = cut
         ).add()
 
-        DefaultTextContextMenuItem(
+        KontextMenuItem(
             leadingIcon = Res.drawable.content_copy,
             label = Res.string.copy,
             shortcut = ContextMenuKeyShortcut(key = Key.C, ctrl = hostOs == OS.Windows, meta = hostOs == OS.MacOS),
@@ -64,7 +64,7 @@ fun defaultTextContextMenuItems(
             onClick = copy
         ).add()
 
-        DefaultTextContextMenuItem(
+        KontextMenuItem(
             leadingIcon = Res.drawable.content_paste,
             label = Res.string.paste,
             shortcut = ContextMenuKeyShortcut(key = Key.V, ctrl = hostOs == OS.Windows, meta = hostOs == OS.MacOS),

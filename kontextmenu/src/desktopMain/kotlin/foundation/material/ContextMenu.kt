@@ -9,10 +9,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.unit.dp
-import foundation.TextContextMenu
-import foundation.textContextMenuArea
-import foundation.composable.ContextMenuBody
-import foundation.representation.model.defaultTextContextMenuItems
+import foundation.KontextMenu
+import foundation.kontextMenuArea
+import foundation.composable.KontextMenuBody
+import foundation.representation.model.kontextMenuItems
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.painterResource
 
@@ -29,17 +29,17 @@ import org.jetbrains.compose.resources.painterResource
  */
 @Suppress("unused")
 @Composable
-fun ContextMenu(
+fun KontextMenu(
     cut: (() -> Unit)?,
     copy: (() -> Unit)?,
     paste: (() -> Unit)?,
     content: @Composable () -> Unit
 ) {
-    TextContextMenu(
+    KontextMenu(
         content = content,
-        textContextMenuArea = textContextMenuArea(
+        kontextMenuArea = kontextMenuArea(
             menuContent = { items, onDismissRequest ->
-                ContextMenuBody(
+                KontextMenuBody(
                     items = items,
                     containerColor = colors.surface,
                     itemHoverColor = colors.primary.copy(alpha = .04F),
@@ -51,11 +51,11 @@ fun ContextMenu(
                     internalSpacing = 20.dp,
                     shape = RectangleShape,
                     onDismissRequest = onDismissRequest,
-                    icon = { drawable, enabled -> TextContextLeadingIcon(drawable, enabled) },
-                    text = { string, enabled, _ -> ContextMenuText(string, enabled) }
+                    icon = { drawable, enabled -> KontextIcon(drawable, enabled) },
+                    text = { string, enabled, _ -> KontextMenuText(string, enabled) }
                 )
             },
-            builder = { defaultTextContextMenuItems(cut, copy, paste).addAll() }
+            builder = { kontextMenuItems(cut, copy, paste).addAll() }
         )
     )
 }
@@ -70,7 +70,7 @@ fun ContextMenu(
  * @param enabled Whether the menu item is enabled
  */
 @Composable
-fun TextContextLeadingIcon(res: DrawableResource, enabled: Boolean) {
+fun KontextIcon(res: DrawableResource, enabled: Boolean) {
     Icon(
         painter = painterResource(res),
         contentDescription = null,
@@ -89,7 +89,7 @@ fun TextContextLeadingIcon(res: DrawableResource, enabled: Boolean) {
  * @param enabled Whether the menu item is enabled
  */
 @Composable
-fun ContextMenuText(label: String, enabled: Boolean) {
+fun KontextMenuText(label: String, enabled: Boolean) {
     Text(
         text = label,
         color = if (enabled) colors.onSurface else colors.onSurface.copy(alpha = 0.38F),

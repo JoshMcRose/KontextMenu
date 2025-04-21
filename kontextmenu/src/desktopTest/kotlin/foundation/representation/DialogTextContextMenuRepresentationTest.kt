@@ -10,11 +10,11 @@ class DialogTextContextMenuRepresentationTest {
     @Test
     fun `test DialogTextContextMenuRepresentation initialization`() {
         // Arrange & Act
-        val representation = DialogTextContextMenuRepresentation()
+        val representation = UncontainerizedKontextMenuRepresentation()
         
         // Assert
         // Simply verify that the object can be created without errors
-        assertEquals(DialogTextContextMenuRepresentation::class, representation::class)
+        assertEquals(UncontainerizedKontextMenuRepresentation::class, representation::class)
     }
     
     @Test
@@ -23,7 +23,7 @@ class DialogTextContextMenuRepresentationTest {
         // Full UI testing would require additional setup
         
         // Arrange
-        val representation = DialogTextContextMenuRepresentation()
+        val representation = UncontainerizedKontextMenuRepresentation()
         val state = ContextMenuState()
         
         // Act - Set the status to Open
@@ -36,7 +36,7 @@ class DialogTextContextMenuRepresentationTest {
     @Test
     fun `test DialogTextContextMenuRepresentation handles closed status`() {
         // Arrange
-        val representation = DialogTextContextMenuRepresentation()
+        val representation = UncontainerizedKontextMenuRepresentation()
         val state = ContextMenuState()
         
         // Act - Set the status to Closed

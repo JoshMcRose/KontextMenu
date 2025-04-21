@@ -16,7 +16,7 @@ import androidx.compose.ui.input.pointer.PointerEventType
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import foundation.representation.model.DefaultTextContextMenuItem
+import foundation.representation.model.KontextMenuItem
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.stringResource
 
@@ -42,8 +42,8 @@ import org.jetbrains.compose.resources.stringResource
  * @param modifier Optional modifier for the context menu
  */
 @Composable
-internal fun ContextMenuBody(
-    items: List<DefaultTextContextMenuItem>,
+internal fun KontextMenuBody(
+    items: List<KontextMenuItem>,
     shape: Shape,
     containerColor: Color,
     itemHoverColor: Color,
@@ -111,7 +111,7 @@ internal fun ContextMenuBody(
  */
 @Composable
 private fun MenuItemContent(
-    item: DefaultTextContextMenuItem,
+    item: KontextMenuItem,
     containerColor: Color,
     itemHoverColor: Color,
     labelColor: Color,
@@ -159,7 +159,7 @@ private fun MenuItemContent(
  */
 @Composable
 private fun MenuItemTextBody(
-    item: DefaultTextContextMenuItem,
+    item: KontextMenuItem,
     labelColor: Color,
     shortcutColor: Color,
     text: @Composable (String, Boolean, Color) -> Unit

@@ -8,12 +8,12 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import foundation.TextContextMenu
-import foundation.textContextMenuArea
+import foundation.KontextMenu
+import foundation.kontextMenuArea
 import foundation.composable.onHover
-import foundation.material3.ContextMenuBody
-import foundation.material3.ContextMenuText
-import foundation.material3.TextContextIcon
+import foundation.material3.KontextMenuBody
+import foundation.material3.KontextMenuText
+import foundation.material3.KontextIcon
 import kontextmenu.app.generated.resources.*
 import org.jetbrains.compose.resources.stringResource
 
@@ -25,11 +25,11 @@ fun CustomContextMenu(
     selectAll: (() -> Unit)?,
     content: @Composable () -> Unit
 ) {
-    TextContextMenu(
+    KontextMenu(
         content = content,
-        textContextMenuArea = textContextMenuArea(
+        kontextMenuArea = kontextMenuArea(
             menuContent = { items, onDismissRequest ->
-                ContextMenuBody {  // ContextMenuBody is a pre-made container designed to Material 3 specifications.
+                KontextMenuBody {  // ContextMenuBody is a pre-made container designed to Material 3 specifications.
                     items.forEach { item ->
                         MenuRow(item) {
                             item.onClick?.let {
@@ -96,7 +96,7 @@ fun MenuRow(
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(12.dp, Alignment.Start)
     ) {
-        item.leadingIcon?.let { TextContextIcon(res = it, enabled = item.enabled) }
+        item.leadingIcon?.let { KontextIcon(res = it, enabled = item.enabled) }
         MenuItemInternal(item)
     }
 }
@@ -109,10 +109,10 @@ private fun MenuItemInternal(item: MenuItem) {
         horizontalArrangement = Arrangement.SpaceBetween
     ) {
         // TextContextIcon and ContextMenuText are convenience functions for adding icons and text to a menu item using Material 3 styling.
-        ContextMenuText(stringResource(item.label), item.enabled, colorScheme.onSurface)
+        KontextMenuText(stringResource(item.label), item.enabled, colorScheme.onSurface)
 
         Spacer(Modifier.width(36.dp))
 
-        item.trailingIcon?.let { TextContextIcon(res = it, enabled = item.enabled) }
+        item.trailingIcon?.let { KontextIcon(res = it, enabled = item.enabled) }
     }
 }

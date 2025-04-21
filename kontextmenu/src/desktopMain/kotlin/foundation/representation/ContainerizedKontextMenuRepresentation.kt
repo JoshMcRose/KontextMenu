@@ -2,10 +2,10 @@ package foundation.representation
 
 import androidx.compose.foundation.ContextMenuState
 import androidx.compose.runtime.Composable
-import foundation.composable.DefaultContextMenuPopup
+import foundation.composable.KontextMenuPopup
 
 /**
- * Default implementation of [TextContextMenuRepresentation] that creates a basic popup for the context menu.
+ * Default implementation of [KontextMenuRepresentation] that creates a basic popup for the context menu.
  *
  * This implementation provides a simple popup container for the context menu content. It handles:
  * - Displaying the popup when the context menu is open
@@ -14,7 +14,7 @@ import foundation.composable.DefaultContextMenuPopup
  *
  * The actual content of the menu is provided by the caller through the `menuContent` parameter of `Representation`.
  */
-class DefaultTextContextMenuRepresentation : TextContextMenuRepresentation {
+class ContainerizedKontextMenuRepresentation : KontextMenuRepresentation {
     /**
      * Creates a popup representation of the context menu.
      *
@@ -30,7 +30,7 @@ class DefaultTextContextMenuRepresentation : TextContextMenuRepresentation {
     ) {
         val status = state.status
         if (status is ContextMenuState.Status.Open) {
-            DefaultContextMenuPopup(
+            KontextMenuPopup(
                 status = status,
                 onDismissRequest = { state.status = ContextMenuState.Status.Closed }
             ) { dismissRequest ->
