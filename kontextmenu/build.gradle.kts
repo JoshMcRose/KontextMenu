@@ -55,6 +55,9 @@ tasks.withType<DokkaTask>().configureEach {
     }
 }
 
+group = "io.github.joshmcrose"
+version = "0.1.0"
+
 mavenPublishing {
     publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL)
     signAllPublications()
