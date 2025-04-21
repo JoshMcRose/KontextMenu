@@ -1,0 +1,36 @@
+<svg viewBox="0 0 500 120" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background rectangle -->
+    <rect x="10" y="10" width="480" height="100" rx="12" fill="#1B1C17" />
+
+    <!-- Decorative accent lines - moved further to borders -->
+    <line x1="25" y1="30" x2="40" y2="30" stroke="#C4CAA9" stroke-width="2" stroke-linecap="round" />
+    <line x1="25" y1="40" x2="40" y2="40" stroke="#C4CAA9" stroke-width="2" stroke-linecap="round" />
+    <line x1="460" y1="80" x2="475" y2="80" stroke="#C4CAA9" stroke-width="2" stroke-linecap="round" />
+    <line x1="460" y1="90" x2="475" y2="90" stroke="#C4CAA9" stroke-width="2" stroke-linecap="round" />
+
+    <!-- Accent circles - moved further apart -->
+    <circle cx="35" cy="85" r="6" fill="none" stroke="#A1D0C6" stroke-width="2" />
+    <circle cx="465" cy="35" r="6" fill="none" stroke="#A1D0C6" stroke-width="2" />
+
+    <!-- Text "KontextMenu" - enlarged and centered -->
+    <text x="250" y="68" font-family="Arial, sans-serif" font-size="44" font-weight="700" text-anchor="middle" fill="#B7D167">KontextMenu</text>
+
+    <!-- Underline accent - adjusted width and position -->
+    <line x1="125" y1="83" x2="375" y2="83" stroke="#D3EE80" stroke-width="2.5" stroke-linecap="round" />
+
+    <!-- Menu icon representation - moved away from text -->
+    <rect x="400" y="50" width="26" height="32" rx="4" fill="#3C4D00" stroke="#B7D167" stroke-width="1.5" />
+    <line x1="405" y1="58" x2="421" y2="58" stroke="#D3EE80" stroke-width="1.5" stroke-linecap="round" />
+    <line x1="405" y1="66" x2="421" y2="66" stroke="#D3EE80" stroke-width="1.5" stroke-linecap="round" />
+    <line x1="405" y1="74" x2="415" y2="74" stroke="#D3EE80" stroke-width="1.5" stroke-linecap="round" />
+
+    <!-- Text field representation - moved away from text -->
+    <rect x="55" y="54" width="40" height="14" rx="4" fill="#46483C" stroke="#B7D167" stroke-width="1.5" />
+    <line x1="60" y1="61" x2="72" y2="61" stroke="#D3EE80" stroke-width="1.5" />
+    <circle cx="88" cy="61" r="1.5" fill="#B7D167" />
+
+    <!-- Additional decorative elements to diversify -->
+    <circle cx="250" cy="25" r="3" fill="#B7D167" />
+    <circle cx="235" cy="25" r="2" fill="#D3EE80" />
+    <circle cx="265" cy="25" r="2" fill="#D3EE80" />
+</svg>
