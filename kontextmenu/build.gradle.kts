@@ -2,7 +2,6 @@ import com.vanniktech.maven.publish.SonatypeHost
 import org.jetbrains.dokka.base.DokkaBase
 import org.jetbrains.dokka.base.DokkaBaseConfiguration
 import org.jetbrains.dokka.gradle.DokkaTask
-import org.jetbrains.kotlin.com.intellij.openapi.util.text.HtmlChunk.icon
 
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
