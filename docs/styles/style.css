@@ -7,56 +7,57 @@
 
 /* --- root styles --- */
 :root {
-    --default-gray: #f4f4f4;
-    --default-font-color: rgb(0, 0, 0);
+    /* Material3 Light Theme Colors */
+    --default-gray: #E3E4D3; /* surfaceVariant */
+    --default-font-color: #1B1C17; /* onSurface */
     --header-font-color: var(--default-font-color);
 
-    --breadcrumb-font-color: #637282;
+    --breadcrumb-font-color: #76786B; /* outline */
     --breadcrumb-margin: 24px;
-    --hover-link-color: #5B5DEF;
+    --hover-link-color: #516600; /* primary */
 
     --footer-height: 64px;
     --footer-padding-top: 48px;
     --footer-background: var(--default-gray);
-    --footer-font-color: var(--average-color);
-    --footer-go-to-top-color: white;
+    --footer-font-color: #46483C; /* onSurfaceVariant */
+    --footer-go-to-top-color: #FEFCF4; /* surface */
 
     --horizontal-spacing-for-content: 16px;
     --bottom-spacing: 16px;
-    --color-scrollbar: rgba(39, 40, 44, 0.40);
+    --color-scrollbar: rgba(27, 28, 23, 0.40); /* onBackground with opacity */
     --color-scrollbar-track: var(--default-gray);
-    --default-white: #fff;
+    --default-white: #FEFCF4; /* surface */
     --background-color: var(--default-white);
     --dark-mode-and-search-icon-color: var(--default-white);
-    --color-dark: #27282c;
+    --color-dark: #1B1C17; /* onSurface */
     --default-font-family: JetBrains Sans, Inter, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Droid Sans, Helvetica Neue, Arial, sans-serif;
     --default-monospace-font-family: JetBrains Mono, SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace;
     --default-font-size: 15px;
     --average-color: var(--color-dark);
     --brief-color: var(--average-color);
-    --copy-icon-color: rgba(39, 40, 44, .7);
+    --copy-icon-color: rgba(27, 28, 23, 0.7); /* onSurface with opacity */
     --copy-icon-hover-color: var(--color-dark);
-    --code-background: rgba(39, 40, 44, .05);
-    --border-color: rgba(39, 40, 44, .2);
-    --navigation-highlight-color: rgba(39, 40, 44, 0.05);
+    --code-background: rgba(27, 28, 23, 0.05); /* onSurface with opacity */
+    --border-color: rgba(27, 28, 23, 0.2); /* onSurface with opacity */
+    --navigation-highlight-color: rgba(27, 28, 23, 0.05); /* onSurface with opacity */
     --top-navigation-height: 73px;
     --max-width: 1160px;
     --white-10: hsla(0, 0%, 100%, .1);
 
-    --active-tab-border-color: #7F52FF;
-    --inactive-tab-border-color: rgba(164, 164, 170, 0.7);
+    --active-tab-border-color: #516600; /* primary */
+    --inactive-tab-border-color: rgba(118, 120, 107, 0.7); /* outline with opacity */
 
-    --active-section-color: #7F52FF;
-    --inactive-section-color: rgba(25, 25, 28, .7);
+    --active-section-color: #516600; /* primary */
+    --inactive-section-color: rgba(27, 28, 23, 0.7); /* onSurface with opacity */
 
     --sidebar-width: 280px;
-    --sidemenu-section-active-color: #7F52FF;
+    --sidemenu-section-active-color: #516600; /* primary */
 }
 
 html {
     height: 100%;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    scrollbar-color: rgba(39, 40, 44, 0.40) #F4F4F4;
+    scrollbar-color: rgba(27, 28, 23, 0.40) #E3E4D3; /* onSurface with opacity, surfaceVariant */
     scrollbar-color: var(--color-scrollbar) var(--color-scrollbar-track);
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -75,7 +76,7 @@ html ::-webkit-scrollbar-track {
 html ::-webkit-scrollbar-thumb {
     width: 8px;
     border-radius: 6px;
-    background: rgba(39, 40, 44, 0.40);
+    background: rgba(27, 28, 23, 0.40); /* onSurface with opacity */
     background: var(--color-scrollbar);
 }
 
@@ -139,6 +140,32 @@ blockquote {
     color: var(--average-color);
 }
 
+/* Material3 Dark Theme Colors */
+.theme-dark {
+    --background-color: #1B1C17; /* dark_background */
+    --color-dark: #46483C; /* dark_surfaceVariant */
+    --default-font-color: #E4E3DB; /* dark_onSurface */
+    --border-color: rgba(228, 227, 219, 0.2); /* dark_onSurface with opacity */
+    --code-background: rgba(228, 227, 219, 0.05); /* dark_onSurface with opacity */
+    --breadcrumb-font-color: #909284; /* dark_outline */
+    --brief-color: rgba(228, 227, 219, 0.4); /* dark_onSurface with opacity */
+    --copy-icon-color: rgba(228, 227, 219, 0.6); /* dark_onSurface with opacity */
+    --copy-icon-hover-color: #E4E3DB; /* dark_onSurface */
+
+    --active-tab-border-color: #B7D167; /* dark_primary */
+    --inactive-tab-border-color: rgba(228, 227, 219, 0.4); /* dark_onSurface with opacity */
+
+    --active-section-color: #B7D167; /* dark_primary */
+    --inactive-section-color: rgba(228, 227, 219, 0.4); /* dark_onSurface with opacity */
+
+    --navigation-highlight-color: rgba(228, 227, 219, 0.05); /* dark_onSurface with opacity */
+    --footer-background: rgba(228, 227, 219, 0.05); /* dark_onSurface with opacity */
+    --footer-font-color: rgba(228, 227, 219, 0.6); /* dark_onSurface with opacity */
+    --footer-go-to-top-color: var(--footer-font-color);
+
+    --sidemenu-section-active-color: #B7D167; /* dark_primary */
+}
+
 .theme-dark blockquote {
     color: var(--default-font-color);
     border-left-color: var(--code-background);
@@ -149,7 +176,7 @@ pre {
 }
 
 dt {
-    color: #444;
+    color: #516600; /* primary */
     font-weight: 530;
 }
 
@@ -215,32 +242,6 @@ td:first-child {
 
 /* /---  utils classes --- */
 
-/* ---dark theme --- */
-.theme-dark {
-    --background-color: #262628;
-    --color-dark: #3d3d41;
-    --default-font-color: rgba(255, 255, 255, 0.96);
-    --border-color: hsla(0, 0%, 100%, 0.2);
-    --code-background: hsla(0, 0%, 100%, 0.05);
-    --breadcrumb-font-color: #8c8c8e;
-    --brief-color: hsla(0, 0%, 100%, 0.4);
-    --copy-icon-color: hsla(0, 0%, 100%, 0.6);
-    --copy-icon-hover-color: #fff;
-
-    --active-tab-border-color: var(--default-font-color);
-    --inactive-tab-border-color: hsla(0, 0%, 100%, 0.4);
-
-    --active-section-color: var(--default-font-color);
-    --inactive-section-color: hsla(0, 0%, 100%, 0.4);
-
-    --navigation-highlight-color: rgba(255, 255, 255, 0.05);
-    --footer-background: hsla(0, 0%, 100%, 0.05);
-    --footer-font-color: hsla(0, 0%, 100%, 0.6);
-    --footer-go-to-top-color: var(--footer-font-color);
-
-    --sidemenu-section-active-color: var(--color-dark);
-}
-
 /* /---dark theme --- */
 
 .root {
@@ -286,7 +287,7 @@ td:first-child {
 
 .main-content .content > hr {
     margin: 30px 0;
-    border-top: 3px double #8c8b8b;
+    border-top: 3px double #76786B; /* outline */
 }
 
 .main-content :is(h1, h2) {
@@ -494,9 +495,9 @@ code:not(.block) {
     width: max-content;
     font-size: var(--default-font-size);
     cursor: default;
-    border: 1px solid #D8DCE1;
+    border: 1px solid #C7C8B8; /* outlineVariant */
     box-sizing: border-box;
-    box-shadow: 0 5px 10px var(--ring-popup-shadow-color);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25); /* shadow with opacity */
     border-radius: 3px;
     color: var(--default-font-color);
 }
@@ -603,8 +604,8 @@ h1.cover {
 }
 
 .main-content a:hover {
-    border-bottom-color: unset;
-    color: inherit
+    border-bottom-color: #516600; /* primary */
+    color: #516600; /* primary */
 }
 
 a small {
@@ -696,7 +697,7 @@ td.content {
 }
 
 .main-subrow .anchor-icon:hover > svg path {
-    fill: var(--hover-link-color);
+    fill: #516600; /* primary */
 }
 
 @media (hover: none) {
@@ -839,7 +840,7 @@ Just in case of possible performance degradation it excluding tabs with briefs o
     }
 
     section {
-        border: 1px solid #e5e5e5;
+        border: 1px solid #C7C8B8; /* outlineVariant */
         border-width: 1px 0;
         padding: 20px 0;
         margin: 0 0 20px;
@@ -857,8 +858,8 @@ Just in case of possible performance degradation it excluding tabs with briefs o
 }
 
 .anchor-highlight {
-    border: 1px solid var(--hover-link-color) !important;
-    box-shadow: 0 0 0 0.2em #c8e1ff;
+    border: 1px solid #516600 !important; /* primary */
+    box-shadow: 0 0 0 0.2em rgba(81, 102, 0, 0.2); /* primary with opacity */
     margin-top: 0.2em;
     margin-bottom: 0.2em;
 }
