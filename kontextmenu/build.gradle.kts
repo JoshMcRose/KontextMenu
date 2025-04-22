@@ -56,6 +56,7 @@ tasks.withType<DokkaTask>().configureEach {
     outputDirectory = rootDir.resolve("docs")
     pluginConfiguration<DokkaBase, DokkaBaseConfiguration> {
         customAssets = listOf(rootDir.resolve("assets/logo-icon.svg"))
+        customStyleSheets = listOf(rootDir.resolve("assets/style.css"))
     }
 }
 
