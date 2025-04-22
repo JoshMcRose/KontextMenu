@@ -56,7 +56,7 @@ tasks.withType<DokkaTask>().configureEach {
     outputDirectory = rootDir.resolve("docs")
     pluginConfiguration<DokkaBase, DokkaBaseConfiguration> {
         customAssets = listOf(rootDir.resolve("assets/logo-icon.svg"))
-        customStyleSheets = listOf(rootDir.resolve("assets/style.css"), rootDir.resolve("assets/prism.css"))
+        customStyleSheets = listOf(rootDir.resolve("assets/style.css"), rootDir.resolve("assets/prism.css"), rootDir.resolve("assets/main.css"), rootDir.resolve("assets/ui.css"))
         homepageLink = "https://github.com/JoshMcRose/KontextMenu"
         templatesDir = rootDir.resolve("dokka")
     }
