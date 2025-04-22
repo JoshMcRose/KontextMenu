@@ -1,0 +1,201 @@
+/*
+ * Custom Dokka styles with Material3 color scheme
+ */
+code .token {
+    white-space: pre;
+}
+
+/**
+ * Styles based on webhelp's prism.js styles
+ * Updated with Material3 color palette
+ */
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #76786B; /* md_theme_light_outline */
+}
+
+.token.punctuation {
+	color: #46483C; /* md_theme_light_onSurfaceVariant */
+}
+
+.token.namespace {
+	opacity: 0.7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #3A665E; /* md_theme_light_tertiary */
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #516600; /* md_theme_light_primary */
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+	color: #5B6146; /* md_theme_light_secondary */
+	/* Light background with transparency */
+	background: hsla(0, 0%, 100%, 0.5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+	font-size: inherit; /* to override .keyword */
+	color: #516600; /* md_theme_light_primary */
+}
+
+.token.function {
+	color: #3A665E; /* md_theme_light_tertiary */
+}
+
+.token.class-name {
+	color: #1B1C17; /* md_theme_light_onBackground */
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+	color: #5B6146; /* md_theme_light_secondary */
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+
+.token.operator {
+	background: none;
+}
+
+/*
+ * DARK THEME
+ */
+:root.theme-dark .token.comment,
+:root.theme-dark .token.prolog,
+:root.theme-dark .token.cdata {
+	color: #909284; /* md_theme_dark_outline */
+}
+
+:root.theme-dark .token.delimiter,
+:root.theme-dark .token.boolean,
+:root.theme-dark .token.keyword,
+:root.theme-dark .token.selector,
+:root.theme-dark .token.important,
+:root.theme-dark .token.atrule {
+	color: #B7D167; /* md_theme_dark_primary */
+}
+
+:root.theme-dark .token.operator,
+:root.theme-dark .token.punctuation,
+:root.theme-dark .token.attr-name {
+	color: #C7C8B8; /* md_theme_dark_onSurfaceVariant */
+}
+
+:root.theme-dark .token.tag,
+:root.theme-dark .token.tag .punctuation,
+:root.theme-dark .token.doctype,
+:root.theme-dark .token.builtin {
+	color: #C4CAA9; /* md_theme_dark_secondary */
+}
+
+:root.theme-dark .token.entity,
+:root.theme-dark .token.number,
+:root.theme-dark .token.symbol {
+	color: #A1D0C6; /* md_theme_dark_tertiary */
+}
+
+:root.theme-dark .token.property,
+:root.theme-dark .token.constant,
+:root.theme-dark .token.variable {
+	color: #C4CAA9; /* md_theme_dark_secondary */
+}
+
+:root.theme-dark .token.string,
+:root.theme-dark .token.char {
+	color: #D3EE80; /* md_theme_dark_onPrimaryContainer */
+}
+
+:root.theme-dark .token.attr-value,
+:root.theme-dark .token.attr-value .punctuation {
+	color: #B7D167; /* md_theme_dark_primary */
+}
+
+:root.theme-dark .token.attr-value .punctuation:first-child {
+	color: #C7C8B8; /* md_theme_dark_onSurfaceVariant */
+}
+
+:root.theme-dark .token.url {
+	text-decoration: underline;
+	color: #B7D167; /* md_theme_dark_primary */
+	background: transparent;
+}
+
+:root.theme-dark .token.function {
+	color: #A1D0C6; /* md_theme_dark_tertiary */
+}
+
+:root.theme-dark .token.regex {
+	background: #3C4D00; /* md_theme_dark_primaryContainer */
+}
+
+:root.theme-dark .token.deleted {
+	background: #93000A; /* md_theme_dark_errorContainer */
+}
+
+:root.theme-dark .token.inserted {
+	background: #204E47; /* md_theme_dark_tertiaryContainer */
+}
+
+:root.theme-dark .token.class-name {
+	color: #E4E3DB; /* md_theme_dark_onBackground */
+}
+
+:root.theme-dark .token.function {
+	color: #A1D0C6; /* md_theme_dark_tertiary */
+}
+
+:root.theme-darkcode .language-css .token.property,
+:root.theme-darkcode .language-css,
+:root.theme-dark .token.property + .token.punctuation {
+	color: #E4E3DB; /* md_theme_dark_onBackground */
+}
+
+code.language-css .token.id {
+	color: #B7D167; /* md_theme_dark_primary */
+}
+
+:root.theme-dark code.language-css .token.selector > .token.class,
+:root.theme-dark code.language-css .token.selector > .token.attribute,
+:root.theme-dark code.language-css .token.selector > .token.pseudo-class,
+:root.theme-dark code.language-css .token.selector > .token.pseudo-element {
+	color: #B7D167; /* md_theme_dark_primary */
+}
+
+:root.theme-dark .language-plaintext .token {
+	/* plaintext code should be colored as article text */
+	color: inherit !important;
+}
