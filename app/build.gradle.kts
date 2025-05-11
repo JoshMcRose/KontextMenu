@@ -11,7 +11,7 @@ plugins {
 kotlin {
     @OptIn(ExperimentalWasmDsl::class)
     wasmJs {
-        moduleName = "composeApp"
+        outputModuleName = "Kontext Menu"
         browser {
             commonWebpackConfig {
                 outputFileName = "composeApp.js"
