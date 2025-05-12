@@ -11,10 +11,10 @@ plugins {
 kotlin {
     @OptIn(ExperimentalWasmDsl::class)
     wasmJs {
-        outputModuleName = "Kontext Menu"
+        outputModuleName = "KontextMenu"
         browser {
             commonWebpackConfig {
-                outputFileName = "composeApp.js"
+                outputFileName = "app.js"
                 devServer = (devServer ?: KotlinWebpackConfig.DevServer()).apply {
                     static = (static ?: mutableListOf()).apply {
                         add(project.projectDir.path)
@@ -42,11 +42,11 @@ kotlin {
             implementation(compose.ui)
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
+            implementation(project(":kontextmenu"))
         }
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)
             implementation(libs.themedetector)
-            implementation(project(":kontextmenu"))
         }
         desktopTest.dependencies {
             implementation(kotlin("test"))

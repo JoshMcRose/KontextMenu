@@ -3,7 +3,13 @@ package io.github.joshmcrose.representation.model
 import androidx.compose.ui.input.key.Key
 import io.github.joshmcrose.Builder
 import io.github.joshmcrose.KontextMenuKeyShortcutImpl
-import io.github.joshmcrose.kontextmenu.generated.resources.*
+import io.github.joshmcrose.kontextmenu.generated.resources.Res
+import io.github.joshmcrose.kontextmenu.generated.resources.content_copy
+import io.github.joshmcrose.kontextmenu.generated.resources.content_cut
+import io.github.joshmcrose.kontextmenu.generated.resources.content_paste
+import io.github.joshmcrose.kontextmenu.generated.resources.copy
+import io.github.joshmcrose.kontextmenu.generated.resources.cut
+import io.github.joshmcrose.kontextmenu.generated.resources.paste
 import org.jetbrains.skiko.OS
 import org.jetbrains.skiko.hostOs
 

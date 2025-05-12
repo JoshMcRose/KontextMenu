@@ -1,14 +1,7 @@
 package io.github.joshmcrose.material3
 
-import io.github.joshmcrose.KontextMenu
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.ColumnScope
-import androidx.compose.foundation.layout.IntrinsicSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Icon
@@ -22,6 +15,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import io.github.joshmcrose.KontextMenu
 import io.github.joshmcrose.kontextMenuArea
 import io.github.joshmcrose.representation.model.kontextMenuItems
 import io.github.joshmcrose.ui.KontextMenuBody

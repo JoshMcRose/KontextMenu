@@ -1,6 +1,5 @@
 package io.github.joshmcrose.ui
 
-import androidx.compose.foundation.ContextMenuState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -10,17 +9,15 @@ import androidx.compose.ui.focus.FocusDirection
 import androidx.compose.ui.focus.FocusManager
 import androidx.compose.ui.input.InputMode
 import androidx.compose.ui.input.InputModeManager
+import androidx.compose.ui.input.key.Key
 import androidx.compose.ui.input.key.KeyEventType
 import androidx.compose.ui.input.key.key
-import androidx.compose.ui.input.key.nativeKeyCode
 import androidx.compose.ui.input.key.type
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.platform.LocalInputModeManager
 import androidx.compose.ui.window.Popup
 import androidx.compose.ui.window.PopupProperties
-import androidx.compose.ui.window.rememberPopupPositionProviderAtPosition
-import java.awt.event.KeyEvent.VK_DOWN
-import java.awt.event.KeyEvent.VK_UP
+import io.github.joshmcrose.KontextMenuState
 
 /**
  * A composable function that creates a popup for displaying context menu content.
@@ -36,7 +33,7 @@ import java.awt.event.KeyEvent.VK_UP
 @OptIn(ExperimentalComposeUiApi::class)
 @Composable
 fun KontextMenuPopup(
-    status: ContextMenuState.Status.Open,
+    status: KontextMenuState.Status.Open,
     onDismissRequest: (() -> Unit)? = null,
     content: @Composable ((() -> Unit)?) -> Unit,
 ) {
@@ -49,13 +46,13 @@ fun KontextMenuPopup(
         popupPositionProvider = rememberPopupPositionProviderAtPosition(positionPx = status.rect.center),
         onKeyEvent = {
             if (it.type == KeyEventType.KeyDown) {
-                when (it.key.nativeKeyCode) {
-                    VK_DOWN -> {
+                when (it.key) {
+                    Key.DirectionDown -> {
                         inputModeManager!!.requestInputMode(InputMode.Keyboard)
                         focusManager!!.moveFocus(FocusDirection.Next)
                         true
                     }
-                    VK_UP -> {
+                    Key.DirectionUp -> {
                         inputModeManager!!.requestInputMode(InputMode.Keyboard)
                         focusManager!!.moveFocus(FocusDirection.Previous)
                         true

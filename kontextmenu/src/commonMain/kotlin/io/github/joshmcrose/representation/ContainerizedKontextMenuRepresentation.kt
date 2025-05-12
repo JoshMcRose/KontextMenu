@@ -1,7 +1,7 @@
 package io.github.joshmcrose.representation
 
-import androidx.compose.foundation.ContextMenuState
 import androidx.compose.runtime.Composable
+import io.github.joshmcrose.KontextMenuState
 import io.github.joshmcrose.ui.KontextMenuPopup
 
 /**
@@ -24,15 +24,15 @@ class ContainerizedKontextMenuRepresentation : KontextMenuRepresentation {
      */
     @Composable
     override fun <T> Representation(
-        state: ContextMenuState,
+        state: KontextMenuState,
         menuContent: @Composable (items: List<T>, onDismissRequest: (() -> Unit)?) -> Unit,
         items: List<T>
     ) {
         val status = state.status
-        if (status is ContextMenuState.Status.Open) {
+        if (status is KontextMenuState.Status.Open) {
             KontextMenuPopup(
                 status = status,
-                onDismissRequest = { state.status = ContextMenuState.Status.Closed }
+                onDismissRequest = { state.status = KontextMenuState.Status.Closed }
             ) { dismissRequest ->
                 menuContent(items, dismissRequest)
             }

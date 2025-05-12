@@ -29,7 +29,7 @@ fun CustomContextMenu(
         content = content,
         kontextMenuArea = kontextMenuArea(
             menuContent = { items, onDismissRequest ->
-                KontextMenuBody {  // ContextMenuBody is a pre-made container designed to Material 3 specifications.
+                KontextMenuBody {  // KontextMenuBody is a pre-made container designed to Material 3 specifications.
                     items.forEach { item ->
                         MenuRow(item) {
                             item.onClick?.let {
