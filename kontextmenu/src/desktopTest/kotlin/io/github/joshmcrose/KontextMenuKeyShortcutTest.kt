@@ -11,7 +11,7 @@ class KontextMenuKeyShortcutTest {
     @Test
     fun `test ContextMenuKeyShortcut creation`() {
         // Arrange & Act
-        val shortcut = KontextMenuKeyShortcut(
+        val shortcut = KontextMenuKeyShortcutImpl(
             key = Key.Companion.X,
             ctrl = true,
             meta = false,
@@ -30,7 +30,7 @@ class KontextMenuKeyShortcutTest {
     @Test
     fun `test ContextMenuKeyShortcut getKeyText`() {
         // Arrange
-        val shortcut = KontextMenuKeyShortcut(key = Key.Companion.X)
+        val shortcut = KontextMenuKeyShortcutImpl(key = Key.Companion.X)
 
         // Act
         val keyText = shortcut.getKeyText()
@@ -43,7 +43,7 @@ class KontextMenuKeyShortcutTest {
     @Test
     fun `test ContextMenuKeyShortcut getKeyStroke with no modifiers`() {
         // Arrange
-        val shortcut = KontextMenuKeyShortcut(key = Key.Companion.X)
+        val shortcut = KontextMenuKeyShortcutImpl(key = Key.Companion.X)
 
         // Act
         val keyStroke = shortcut.getKeyStroke()
@@ -56,7 +56,7 @@ class KontextMenuKeyShortcutTest {
     @Test
     fun `test ContextMenuKeyShortcut getKeyStroke with all modifiers`() {
         // Arrange
-        val shortcut = KontextMenuKeyShortcut(
+        val shortcut = KontextMenuKeyShortcutImpl(
             key = Key.Companion.X,
             ctrl = true,
             meta = true,
@@ -95,7 +95,7 @@ class KontextMenuKeyShortcutTest {
     @Test
     fun `test ContextMenuKeyShortcut equals and hashCode`() {
         // Arrange
-        val shortcut1 = KontextMenuKeyShortcut(
+        val shortcut1 = KontextMenuKeyShortcutImpl(
             key = Key.Companion.X,
             ctrl = true,
             meta = false,
@@ -103,7 +103,7 @@ class KontextMenuKeyShortcutTest {
             shift = false
         )
 
-        val shortcut2 = KontextMenuKeyShortcut(
+        val shortcut2 = KontextMenuKeyShortcutImpl(
             key = Key.Companion.X,
             ctrl = true,
             meta = false,
@@ -111,7 +111,7 @@ class KontextMenuKeyShortcutTest {
             shift = false
         )
 
-        val shortcut3 = KontextMenuKeyShortcut(
+        val shortcut3 = KontextMenuKeyShortcutImpl(
             key = Key.Companion.Y,
             ctrl = true,
             meta = false,
@@ -130,7 +130,7 @@ class KontextMenuKeyShortcutTest {
     @Test
     fun `test ContextMenuKeyShortcut toString`() {
         // Arrange
-        val shortcut = KontextMenuKeyShortcut(
+        val shortcut = KontextMenuKeyShortcutImpl(
             key = Key.Companion.X,
             ctrl = true,
             meta = true,

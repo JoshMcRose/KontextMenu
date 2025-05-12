@@ -1,26 +1,25 @@
 package io.github.joshmcrose
 
 import androidx.compose.ui.input.key.Key
-import androidx.compose.ui.input.key.KeyEvent
-import androidx.compose.ui.input.key.NativeKeyEvent
-import kotlinx.coroutines.W3CWindow
-import org.jetbrains.skiko.hostOs
-import org.w3c.dom.events.KeyboardEvent
+import io.github.joshmcrose.KontextMenuKeyShortcut.Companion.Alt
+import io.github.joshmcrose.KontextMenuKeyShortcut.Companion.Control
+import io.github.joshmcrose.KontextMenuKeyShortcut.Companion.Meta
+import io.github.joshmcrose.KontextMenuKeyShortcut.Companion.Shift
 import org.w3c.dom.events.KeyboardEventInit
 
-class KontextMenuKeyShortcut(
-    val key: Key,
-    val ctrl: Boolean = false,
-    val meta: Boolean = false,
-    val alt: Boolean = false,
-    val shift: Boolean = false
-) {
+class KontextMenuKeyShortcutImpl(
+    override val key: Key,
+    override val ctrl: Boolean = false,
+    override val meta: Boolean = false,
+    override val alt: Boolean = false,
+    override val shift: Boolean = false
+) : KontextMenuKeyShortcut {
     /**
      * Gets the text representation of the key.
      *
      * @return The text representation of the key
      */
-    fun getKeyText(): String = KeyboardEventInit(key = key.toString(), code = key.keyCode.toString()).key ?: ""
+    override fun getKeyText(): String = KeyboardEventInit(key = key.toString(), code = key.keyCode.toString()).key ?: ""
 
     /**
      * Gets a formatted string representation of the keyboard shortcut.
@@ -30,7 +29,7 @@ class KontextMenuKeyShortcut(
      *
      * @return A formatted string representation of the keyboard shortcut
      */
-    fun getKeyStroke() = buildString {
+    override fun getKeyStroke() = buildString {
         if (ctrl) append(Control)
         if (alt) append(Alt)
         if (shift) append(Shift)
@@ -42,7 +41,7 @@ class KontextMenuKeyShortcut(
         if (this === other) return true
         if (other == null || this::class != other::class) return false
 
-        other as KontextMenuKeyShortcut
+        other as KontextMenuKeyShortcutImpl
 
         if (key != other.key) return false
         if (ctrl != other.ctrl) return false
@@ -68,36 +67,5 @@ class KontextMenuKeyShortcut(
         if (alt) append("Alt+")
         if (shift) append("Shift+")
         append(key)
-    }
-
-    /**
-     * Companion object containing platform-specific modifier key representations.
-     */
-    companion object {
-        private val IsMacOS = hostOs.isMacOS
-
-        /**
-         * Platform-specific representation of the Control key.
-         * On macOS, this is "⌃", on other platforms, this is "Ctrl+".
-         */
-        val Control = if (IsMacOS) "⌃" else "Ctrl+"
-
-        /**
-         * Platform-specific representation of the Meta/Command key.
-         * On macOS, this is "⌘", on other platforms, this is "Win+".
-         */
-        val Meta = if (IsMacOS) "⌘" else "Win+"
-
-        /**
-         * Platform-specific representation of the Alt/Option key.
-         * On macOS, this is "⌥", on other platforms, this is "Alt+".
-         */
-        val Alt = if (IsMacOS) "⌥" else "Alt+"
-
-        /**
-         * Platform-specific representation of the Shift key.
-         * On macOS, this is "⇧", on other platforms, this is "Shift+".
-         */
-        val Shift = if (IsMacOS) "⇧" else "Shift+"
     }
 }

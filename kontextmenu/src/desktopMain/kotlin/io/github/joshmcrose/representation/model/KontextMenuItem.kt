@@ -2,7 +2,7 @@ package io.github.joshmcrose.representation.model
 
 import androidx.compose.ui.input.key.Key
 import io.github.joshmcrose.Builder
-import io.github.joshmcrose.KontextMenuKeyShortcut
+import io.github.joshmcrose.KontextMenuKeyShortcutImpl
 import io.github.joshmcrose.kontextmenu.generated.resources.*
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.StringResource
@@ -24,7 +24,7 @@ import org.jetbrains.skiko.hostOs
 data class KontextMenuItem(
     val leadingIcon: DrawableResource?,
     val label: StringResource,
-    val shortcut: KontextMenuKeyShortcut?,
+    val shortcut: KontextMenuKeyShortcutImpl?,
     val enabled: Boolean,
     val onClick: (() -> Unit)?
 )
@@ -50,7 +50,7 @@ fun kontextMenuItems(
         KontextMenuItem(
             leadingIcon = Res.drawable.content_cut,
             label = Res.string.cut,
-            shortcut = KontextMenuKeyShortcut(key = Key.X, ctrl = hostOs == OS.Windows, meta = hostOs == OS.MacOS),
+            shortcut = KontextMenuKeyShortcutImpl(key = Key.X, ctrl = hostOs == OS.Windows, meta = hostOs == OS.MacOS),
             enabled = cut != null,
             onClick = cut
         ).add()
@@ -58,7 +58,7 @@ fun kontextMenuItems(
         KontextMenuItem(
             leadingIcon = Res.drawable.content_copy,
             label = Res.string.copy,
-            shortcut = KontextMenuKeyShortcut(key = Key.C, ctrl = hostOs == OS.Windows, meta = hostOs == OS.MacOS),
+            shortcut = KontextMenuKeyShortcutImpl(key = Key.C, ctrl = hostOs == OS.Windows, meta = hostOs == OS.MacOS),
             enabled = copy != null,
             onClick = copy
         ).add()
@@ -66,7 +66,7 @@ fun kontextMenuItems(
         KontextMenuItem(
             leadingIcon = Res.drawable.content_paste,
             label = Res.string.paste,
-            shortcut = KontextMenuKeyShortcut(key = Key.V, ctrl = hostOs == OS.Windows, meta = hostOs == OS.MacOS),
+            shortcut = KontextMenuKeyShortcutImpl(key = Key.V, ctrl = hostOs == OS.Windows, meta = hostOs == OS.MacOS),
             enabled = paste != null,
             onClick = paste
         ).add()
