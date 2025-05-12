@@ -1,7 +1,7 @@
 package io.github.joshmcrose.representation
 
+import androidx.compose.foundation.ContextMenuState
 import androidx.compose.runtime.Composable
-import io.github.joshmcrose.KontextMenuState
 
 /**
  * Implementation of [KontextMenuRepresentation] that provides minimal structure.
@@ -21,13 +21,13 @@ class UncontainerizedKontextMenuRepresentation : KontextMenuRepresentation {
      */
     @Composable
     override fun <T> Representation(
-        state: KontextMenuState,
+        state: ContextMenuState,
         menuContent: @Composable ((List<T>, (() -> Unit)?) -> Unit),
         items: List<T>
     ) {
         val status = state.status
-        if (status is KontextMenuState.Status.Open) {
-            menuContent(items) { state.status = KontextMenuState.Status.Closed }
+        if (status is ContextMenuState.Status.Open) {
+            menuContent(items) { state.status = ContextMenuState.Status.Closed }
         }
     }
 }

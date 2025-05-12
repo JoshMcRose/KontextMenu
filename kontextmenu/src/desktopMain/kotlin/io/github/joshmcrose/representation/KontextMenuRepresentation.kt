@@ -1,9 +1,9 @@
 package io.github.joshmcrose.representation
 
+import androidx.compose.foundation.ContextMenuState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.ProvidableCompositionLocal
 import androidx.compose.runtime.staticCompositionLocalOf
-import io.github.joshmcrose.KontextMenuState
 
 /**
  * Interface for creating custom context menu representations.
@@ -26,7 +26,7 @@ interface KontextMenuRepresentation {
      */
     @Composable
     fun <T> Representation(
-        state: KontextMenuState,
+        state: ContextMenuState,
         menuContent: @Composable (items: List<T>, onDismissRequest: (() -> Unit)?) -> Unit,
         items: List<T>
     )

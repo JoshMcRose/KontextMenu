@@ -1,6 +1,5 @@
 package io.github.joshmcrose.material
 
-import io.github.joshmcrose.KontextMenu
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.Icon
 import androidx.compose.material.MaterialTheme.colors
@@ -10,6 +9,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.unit.dp
+import io.github.joshmcrose.KontextMenu
 import io.github.joshmcrose.kontextMenuArea
 import io.github.joshmcrose.representation.model.kontextMenuItems
 import io.github.joshmcrose.ui.KontextMenuBody
